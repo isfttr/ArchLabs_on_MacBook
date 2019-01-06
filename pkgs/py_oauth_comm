@@ -1,5 +1,0 @@
-python2 python/oauth2.py --generate_oauth2_token \
-       --client_id=817099865965-arur0jekuv53spi9nmvcmfptv3gnjru8.apps.googleusercontent.com --client_secret=ParwwpajqgjyOSc3akBrHbj1
-
- python python/oauth2.py --user=lucas.fernandes.df@gmail.com --client_id=817099865965-arur0jekuv53spi9nmvcmfptv3gnjru8.apps.googleusercontent.com  --client_secret=ParwwpajqgjyOSc3akBrHbj --refresh_token=1/aVVsV9OrpScki6gUmq7sRaqEw1hXBNbORe5lL0hbWSA
- access_token=ya29.GluJBuJPtDdVYVokpDPc0BarMJA67tSuBnXSEQhtQ5CRPVtQL5fGB7Q6Y-dq7qHG1ivPP3ShcY2UkVd4iQo7MV_rrC_LyfR69E-SdszFaJHrppMF9KifFDNtt30a
