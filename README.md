@@ -5,9 +5,9 @@ a MacBook Pro mid-2012. Currenly it is using i3 gaps in a
 solarized colorscheme. When I first installed ArchLabs I
 used the urxvt terminal but I found out about the problems
 it had over color compatibility -- syntax on neovim was not
-working. The workaroung urxvt was to install st from
+working. The workaround urxvt was to install st from
 [LukeSmithxyz](https://github.com/LukeSmithxyz/st) which
-pretty much worked out of the box.
+pretty much worked out of the box[1](The font is set to 16 and might be too big. Change the configuration file and rerun `make && make install`).
 
 ## What is not working yet
 
