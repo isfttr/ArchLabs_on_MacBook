@@ -112,6 +112,8 @@ set softtabstop=4      " spaces to enter for each tab
 set shiftwidth=4       " amount of spaces for indentation
 set shortmess+=aAcIws  " Hide or shorten certain messages
 
+set tw=60
+
 set ignorecase
 set cursorline          "highlight line under the cursor
 set background=dark

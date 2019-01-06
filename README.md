@@ -15,8 +15,8 @@ rerun `make && make install`.
 ## What is not working yet
 
 The main problem right now is battery which I didn't have
-the time to deal with and the keyboard, which is backlit, is
-not working.
+the time to deal with and the light controls of the light in
+the keyboard is not working.
 
 ## For brazilian users
 
