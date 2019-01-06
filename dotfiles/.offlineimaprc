@@ -1,0 +1,37 @@
+[general]
+accounts = lucasfernandesdf
+pythonfile = ~/.config/mutt/credentials/imappwd.py
+
+[Account lucasfernandesdf]
+localrepository = lucasfernandesdf-local
+remoterepository = lucasfernandesdf-remote
+#autorefresh = 10
+maxage = 720
+ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
+
+[Repository lucasfernandesdf-remote]
+auth_mechanisms = LOGIN
+type = Gmail
+remoteuser = admin
+remotepasseval = mailpasswd("lucasfernandesdf")
+remoteport = 993
+starttls = no
+ssl = yes
+folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+oauth2_client_id = 817099865965-arur0jekuv53spi9nmvcmfptv3gnjru8.apps.googleusercontent.com
+oauth2_client_secret = ParwwpajqgjyOSc3akBrHbj1
+oauth2_access_token = ya29.GluJBuJPtDdVYVokpDPc0BarMJA67tSuBnXSEQhtQ5CRPVtQL5fGB7Q6Y-dq7qHG1ivPP3ShcY2UkVd4iQo7MV_rrC_LyfR69E-SdszFaJHrppMF9KifFDNtt30a
+oauth2_request_url = https://accounts.google.com/o/oauth2/token
+oauth2_refresh_token = 1/aVVsV9OrpScki6gUmq7sRaqEw1hXBNbORe5lL0hbWSA
+
+remotepassfile = ~/OneDrive/offlineimap/lucasfernandesdf
+
+#transporttunnel = openssl s_client -host myimap -port 993 -quiet
+
+cert_fingerprint=f3043dd689a2e7dddfbef82703a6c65ea9b634c1
+
+[Repository lucasfernandesdf-local]
+type = GmailMaildir
+localfolders = ~/.mail/lucasfernandesdf

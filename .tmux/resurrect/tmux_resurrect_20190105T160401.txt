@@ -1,0 +1,6 @@
+pane	primary	0	:music	0	:-	0	:/home/archmbp/OneDrive/Music/Synthwave_tracks/odysseus_best_of_cyberpunk	0	vifm	:bash
+pane	primary	0	:music	0	:-	1	:/home/archmbp/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/Arquivo_Qualifs/Qualif_X	1	man	:bash
+pane	primary	1	:bash	1	:*	0	:/home/archmbp/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/Arquivo_Qualifs/Qualif_X	1	bash	:
+window	primary	0	0	:-	14e5,154x41,0,0{77x41,0,0,0,76x41,78,0,1}
+window	primary	1	1	:*	b1bf,154x41,0,0,2
+state	primary	

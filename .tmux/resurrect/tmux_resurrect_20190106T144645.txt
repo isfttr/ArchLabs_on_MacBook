@@ -1,0 +1,15 @@
+pane	mestrado	1	:vifm	0	:-	0	:/home/archmbp/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos	1	vifm	:bash
+pane	mestrado	2	:bash	1	:*	0	:/home/archmbp	1	bash	:bash
+pane	primary	0	:last	0	:	0	:/home/archmbp	1	bash	:
+pane	primary	1	:nvim	0	:-	0	:/home/archmbp/OneDrive/Music/jim_tv	1	vifm	:bash
+pane	primary	2	:nvim	1	:*	0	:/home/archmbp/GitHub/config_files/.vim/after/syntax	1	vifm	:zsh
+pane	primary	3	:man	0	:	0	:/home/archmbp	1	man	:bash
+pane	primary	4	:bash	0	:	0	:/home/archmbp	1	bash	:bash
+window	mestrado	1	0	:-	590f,154x41,0,0,10
+window	mestrado	2	1	:*	5910,154x41,0,0,11
+window	primary	0	0	:	ae66,80x23,0,0,9
+window	primary	1	0	:-	ae60,80x23,0,0,3
+window	primary	2	1	:*	ae61,80x23,0,0,4
+window	primary	3	0	:	b1c3,154x41,0,0,6
+window	primary	4	0	:	5761,80x23,0,0,12
+state	primary	

@@ -1,0 +1,10 @@
+pane	0	0	:music	1	:*	0	:/home/archmbp	1	bash	:
+pane	primary	0	:music	0	:	0	:/home/archmbp/OneDrive/Music/Synthwave_tracks/odysseus_best_of_synthwave	1	vifm	:bash
+pane	primary	0	:music	0	:	1	:/home/archmbp/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/Arquivo_Qualifs/Qualif_X	0	bash	:
+pane	primary	1	:nvim	1	:*	0	:/home/archmbp/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/Arquivo_Qualifs/Qualif_X	1	vifm	:bash
+pane	primary	2	:nvim	0	:-	0	:/home/archmbp	1	bash	:bash
+window	0	0	1	:*	b1bd,154x41,0,0,0
+window	primary	0	0	:	183c,159x45,0,0{80x45,0,0,1,78x45,81,0,2}
+window	primary	1	1	:*	c440,159x45,0,0,3
+window	primary	2	0	:-	c441,159x45,0,0,4
+state	primary	0

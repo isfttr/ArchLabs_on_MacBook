@@ -1,0 +1,26 @@
+pane	confs	0	:man	0	:	0	:/home/archmbp	1	man	:man tmux
+pane	confs	0	:man	0	:	1	:/home/archmbp	0	bash	:
+pane	confs	1	:i3/bashrc	0	:	0	:/home/archmbp/.config/i3	0	nvim	:bash
+pane	confs	1	:i3/bashrc	0	:	1	:/home/archmbp	1	nvim	:bash
+pane	confs	2	:vim/xres	0	:-	0	:/home/archmbp/.config/nvim	0	nvim	:bash
+pane	confs	2	:vim/xres	0	:-	1	:/home/archmbp	1	nvim	:bash
+pane	confs	3	:bash	1	:*	0	:/home/archmbp	1	bash	:bash
+pane	edit	0	:refs	0	:-	0	:/home/archmbp	0	man	:man tmux
+pane	edit	0	:refs	0	:-	1	:/home/archmbp	1	htop	:htop
+pane	edit	1	:nvim	1	:*	0	:/home/archmbp	1	nvim	:bash
+pane	main	0	:refs	0	:	0	:/home/archmbp	0	man	:man tmux
+pane	main	0	:refs	0	:	1	:/home/archmbp	1	htop	:htop
+pane	main	1	:files	0	:	0	:/home/archmbp	1	vifm	:bash
+pane	main	2	:music	1	:*	0	:/home/archmbp/OneDrive/Music/Synthwave_tracks/odysseus_best_of_synthwave	1	vifm	:bash
+pane	main	3	:bash	0	:-	0	:/home/archmbp	1	bash	:bash
+window	confs	0	0	:	94f2,154x41,0,0{77x41,0,0,3,76x41,78,0,4}
+window	confs	1	0	:	94fb,154x41,0,0{77x41,0,0,5,76x41,78,0,6}
+window	confs	2	0	:-	9504,154x41,0,0{77x41,0,0,7,76x41,78,0,8}
+window	confs	3	1	:*	b1c6,154x41,0,0,9
+window	edit	0	0	:-	14e5,154x41,0,0{77x41,0,0,0,76x41,78,0,1}
+window	edit	1	1	:*	b1bf,154x41,0,0,2
+window	main	0	0	:	7040,154x41,0,0{77x41,0,0,10,76x41,78,0,11}
+window	main	1	0	:	5911,154x41,0,0,12
+window	main	2	1	:*	5912,154x41,0,0,13
+window	main	3	0	:-	5913,154x41,0,0,14
+state	main	

@@ -1,0 +1,15 @@
+pane	mestrado	1	:vifm	0	:-	0	:/home/archmbp/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos	1	vifm	:bash
+pane	mestrado	2	:bash	1	:*	0	:/home/archmbp	1	bash	:bash
+pane	primary	0	:music	1	:*	0	:/home/archmbp/OneDrive/Music/Synthwave_tracks/jim_tv	1	mpv	:bash
+pane	primary	0	:music	1	:*	1	:/home/archmbp/OneDrive/Music/Synthwave_tracks/jim_tv	0	bash	:bash
+pane	primary	0	:music	1	:*	2	:/home/archmbp/OneDrive/Music/Synthwave_tracks/jim_tv	0	vifm	:bash
+pane	primary	1	:nvim	0	:	0	:/home/archmbp/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/Arquivo_Qualifs/Qualif_11/para_banca	1	vifm	:bash
+pane	primary	2	:nvim	0	:	0	:/home/archmbp	1	bash	:bash
+pane	primary	3	:man	0	:-	0	:/home/archmbp	1	man	:bash
+window	mestrado	1	0	:-	590f,154x41,0,0,10
+window	mestrado	2	1	:*	5910,154x41,0,0,11
+window	primary	0	1	:*	ccfe,154x41,0,0{77x41,0,0,1,76x41,78,0[76x20,78,0,2,76x20,78,21,9]}
+window	primary	1	0	:	b1c0,154x41,0,0,3
+window	primary	2	0	:	b1c1,154x41,0,0,4
+window	primary	3	0	:-	b1c3,154x41,0,0,6
+state	mestrado	
