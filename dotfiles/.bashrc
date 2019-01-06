@@ -57,7 +57,7 @@ export EDITOR="$VISUAL"
 
 # NNN
 
-export NNN_BMS="d:~/Downloads;o:~/OneDrive;m:~/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos;w:~OneDrive/Workspace/Cool_Wallpapers/"
+export NNN_BMS="d:~/Downloads;o:~/OneDrive"
 export NNN_USE_EDITOR=1
 export NNN_CONTEXT_COLORS="4"
 export NNN_COPIER="~/scripts/copier.sh"
