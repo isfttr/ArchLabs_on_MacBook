@@ -28,10 +28,28 @@ oauth2_refresh_token = 1/aVVsV9OrpScki6gUmq7sRaqEw1hXBNbORe5lL0hbWSA
 
 remotepassfile = ~/OneDrive/offlineimap/lucasfernandesdf
 
-#transporttunnel = openssl s_client -host myimap -port 993 -quiet
+transporttunnel = openssl s_client -host myimap -port 993 -quiet
 
 cert_fingerprint=f3043dd689a2e7dddfbef82703a6c65ea9b634c1
 
 [Repository lucasfernandesdf-local]
 type = GmailMaildir
 localfolders = ~/.mail/lucasfernandesdf
+
+
+[Account isetfire]
+localrepository = isetfire-local
+remoterepository = isetfire-remote
+
+[Repository isetfire-remote]
+auth_mechanisms = LOGIN
+type = IMAP
+remoteuser = admin
+remotepasseval = mailpasswd("isetfire")
+remotehost = 127.0.0.1
+remoteport = 1143
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository isetfire-local]
+type = Maildir
+localfolders = ~/.mail/isetfire

@@ -70,6 +70,7 @@ export TERM=st-256color
 #alias vim='nvim'
 alias sbash='cd && source .bashrc'
 alias vbash='cd && nvim .bashrc'
+alias i3l='rofi_run -l'
 
 ## for applications
 alias r='ranger'
@@ -85,10 +86,11 @@ alias uskb='setxkbmap -layout us -variant mac'
 alias inkb='setxkbmap -layout us -variant intl'
 
 ## to directories
-alias music='cd && cd OneDrive/Music/ && vifm'
-alias down='cd && cd Downloads/ && vifm'
-alias oned='cd && cd OneDrive/Workspace/ && vifm'
-alias mestrado='cd && OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/'
+alias music='cd && cd ~/OneDrive/Music/ && vifm'
+alias down='cd && cd ~/Downloads/ && vifm'
+alias oned='cd && cd ~/OneDrive/Workspace/ && vifm'
+alias mestrado='cd && ~/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/'
+alias cgit='cd && cd ~/GitHub'
 
 ## access config files
 alias i3conf='cd && cd .config/i3 && nvim config'

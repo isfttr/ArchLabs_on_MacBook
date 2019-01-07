@@ -40,7 +40,7 @@
 
 
 ! Rofi
-rofi.font: monospace 9
+rofi.font: monospace 10
 rofi.padding: 20
 rofi.line-padding: 2
 rofi.color-enabled: true
@@ -55,7 +55,7 @@ rofi.kb-cancel: Escape,Alt+F1
 ! xterm
 xterm*termName: xterm-256color
 xterm*font: monospace
-xterm*faceName: monospace:size=9
+xterm*faceName: monospace:size=10
 xterm*loginShell: true
 xterm*vt100*geometry: 90x34
 xterm*saveLines: 2000
@@ -95,7 +95,7 @@ UXTerm*termName: xterm-256color
 UXTerm*cursorColor: white
 UXTerm*VT100.geometry: 90x34
 UXTerm*font: monospace
-UXTerm*faceSize: 9
+UXTerm*faceSize: 10
 UXTerm*dynamicColors: true
 UXTerm*utf8: 2
 UXTerm*eightBitInput: true

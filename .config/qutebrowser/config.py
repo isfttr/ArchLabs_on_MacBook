@@ -12,6 +12,15 @@ config.bind("tt", "tab-clone")
 config.bind("ch", "history-clear")
 config.bind("cs", "config-source")
 config.bind("pf", "fullscreen")
+config.bind("po", "edit-url")
+
+# Window taking. It is used in respect to the window you're
+# typing the command. If I'm on window 1 trying to take a
+# tab on window 2 I use ta. It only works with two windows.
+# to position the right tab to take as number 1, go to the
+# wanted tab and type `1gm`.
+config.bind("ta", "tab-take 2/1")  #take forewards, f win1
+config.bind("tA", "tab-take 1/1")  #take backwards, f win2
 
 # When to show favicons in the tab bar.
 # Type: String
