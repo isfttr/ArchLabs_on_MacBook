@@ -57,13 +57,16 @@ export EDITOR="$VISUAL"
 
 # NNN
 
-export NNN_BMS="d:~/Downloads;o:~/OneDrive"
-export NNN_USE_EDITOR=1
-export NNN_CONTEXT_COLORS="4"
-export NNN_COPIER="~/scripts/copier.sh"
-export NNN_FALLBACK_OPENER=xdg-open
+# export NNN_BMS="d:~/Downloads;o:~/OneDrive"
+# export NNN_USE_EDITOR=1
+# export NNN_CONTEXT_COLORS="4"
+# export NNN_COPIER="~/scripts/copier.sh"
+# export NNN_FALLBACK_OPENER=xdg-open
 
-# setting term 
+# expand aliases to non-interactive shells
+shopt -s expand_aliases
+
+# setting term
 export TERM=st-256color
 
 # aliases below
