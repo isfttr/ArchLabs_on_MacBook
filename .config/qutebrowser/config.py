@@ -16,7 +16,7 @@ config.bind("pf", "fullscreen")
 config.bind("po", "edit-url")
 
 # for userscprits
-config.bind("er", "spawn --userscprit readability")
+config.bind("er", "spawn --userscript readability")
 
 # Window taking. It is used in respect to the window you're
 # typing the command. If I'm on window 1 trying to take a
