@@ -97,6 +97,9 @@ call plug#end()
 " Arch defaults
 runtime! archlinux.vim
 
+" make vim read the aliases to use on the shell
+let $BASH_ENV = "~/.bash_aliases"
+
 " system clipboard (requires +clipboard)
 set clipboard^=unnamed,unnamedplus
 
@@ -123,6 +126,11 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 3
 
 let g:python3_host_pro=$PYENV_ROOT.'/versions/neovim-g3/bin/python'
+
+" make calcurse notes markdown compatible
+
+autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
+autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown
 
 " ------ leader mapping ------
 
@@ -398,26 +406,29 @@ function! <SID>bufferselect(pattern) abort
     endif
 endfunction
 
-" open ranger as a file chooser
-function! <SID>ranger()
-    let l:temp = tempname()
-    execute 'silent !xterm -e ranger --choosefiles='.shellescape(l:temp).' $PWD'
-    if !filereadable(temp)
-        redraw!
-        return
-    endif
-    let l:names = readfile(l:temp)
-    if empty(l:names)
-        redraw!
-        return
-    endif
-    execute 'edit '.fnameescape(l:names[0])
-    for l:name in l:names[1:]
-        execute 'argadd '.fnameescape(l:name)
-    endfor
-    redraw!
-endfunction
+"  open ranger as a file chooser
+"function! <SID>ranger()
+"    let l:temp = tempname()
+"    execute 'silent !xterm -e ranger --choosefiles='.shellescape(l:temp).' $PWD'
+"    if !filereadable(temp)
+"        redraw!
+"        return
+"    endif
+"    let l:names = readfile(l:temp)
+"    if empty(l:names)
+"        redraw!
+"        return
+"    endif
+"    execute 'edit '.fnameescape(l:names[0])
+"    for l:name in l:names[1:]
+"        execute 'argadd '.fnameescape(l:name)
+"    endfor
+"    redraw!
+"endfunction
 
+
+" ------------- plugin configurations
+"
 " deoplete options
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete=1
