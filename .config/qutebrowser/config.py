@@ -7,12 +7,16 @@ import subprocess
 # Uncomment this to still load settings configured via autoconfig.yml
 # config.load_autoconfig()
 
-# bindings
+# bindings 
+# for commands
 config.bind("tt", "tab-clone")
 config.bind("ch", "history-clear")
 config.bind("cs", "config-source")
 config.bind("pf", "fullscreen")
 config.bind("po", "edit-url")
+
+# for userscprits
+config.bind("er", "spawn --userscprit readability")
 
 # Window taking. It is used in respect to the window you're
 # typing the command. If I'm on window 1 trying to take a
