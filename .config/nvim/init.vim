@@ -132,6 +132,7 @@ let g:python3_host_pro=$PYENV_ROOT.'/versions/neovim-g3/bin/python'
 autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
 autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown
 
+" 
 " ------ leader mapping ------
 
 let g:mapleader = ","
@@ -253,6 +254,14 @@ nnoremap <Bar> <C-W>v<C-W><Right>
 
 " copy whole line
 noremap Y y$
+
+" ------ additional maps ---
+"  easier pane navigation
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 " ------ autocmd ------
 
@@ -487,3 +496,13 @@ let g:limelight_eop = '\ze\n^\s'
 " Highlighting priority (default: 10)
 "   Set it to -1 not to overrule hlsearch
 let g:limelight_priority = -1
+
+" vim-markdown
+" change folding style
+
+  let g:vim_markdown_folding_style_pythonic = 1
+
+" set header folding level
+
+  :let g:vim_markdown_folding_level = 1
+
