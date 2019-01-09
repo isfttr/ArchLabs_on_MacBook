@@ -16,17 +16,6 @@ rerun `make && make install`.
 
 ## What is not working yet
 
-- **Battery**: it is not optimized so it is consuming more than
-    it should, even though the computer is operating in a
-    lower capacity than while in MacOS. Currently, I'm using the
-    Xfce Power Manager which is easy to setup and gives me
-    an estimate for the battery consumption when the
-    computer is not plugged. If you're looking for a quick
-    fix, I have found in the past solutions that involved
-    `tlp`. Before the current installation, I used it but not
-    enough to say if it made a difference. Another possible
-    solution might be to switch of graphical components that
-    consume power and are not needed in the day-to-day activies.
 - **Keyboard**: it is backlit but currently that function is
     not available. Didn't try to solve this one yet because
     it is not a huge problem. The other problem is that the
@@ -59,6 +48,31 @@ response, the quickest fix was found in this [question](https://askubuntu.com/qu
 After installing the firmware, run the following commands
 `sudo modprobe -rv b43` and `sudo modprobe -v b43`. Test the
 `iwconfig` again.
+
+### Battery life
+
+The battery has improved hugely over the week and after the
+modifications listed by [Michael Chladek](https://mchladek.me/post/arch-mbp/).
+Namely, installing `powertop`, `thermald` and `cpupower`
+just like he described. When running `powertop` for the
+first time, the screen will go black for a few minutes for a
+couple of times - don't freak out. After installing
+everything and enabling the `.service`'s, reboot. I also
+installed `cpupower-gui` so I could easily set the max
+clock for the CPU at 2.9 GHz, instead of 3.1. As far as I
+researched, `thermald` doesn't need further configurations,
+you just need to enable it.
+
+### OneDrive
+
+The best way to get OneDrive to work is using the fork by
+[abraunegg](https://github.com/abraunegg/onedrive). The
+[Skillion](https://github.com/skilion/onedrive) one worked
+for the first time but stopped working for some weird reason
+that I didn't fully comprehend. Known problem is a
+incompatibility issue between `curl 7.63` and `onedrive`.
+The workaround was to use the package `downgrade` to switch
+`curl 7.61`. 
 
 ## Coming soon
 

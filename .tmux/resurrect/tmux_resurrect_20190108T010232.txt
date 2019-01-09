@@ -1,0 +1,6 @@
+pane	work	1	:calendar	1	:*	0	:/home/archmbp	0	calcurse	:bash
+pane	work	1	:calendar	1	:*	1	:/home/archmbp/GitHub	1	bash	:bash
+pane	work	2	:bash	0	:-	0	:/home/archmbp	1	bash	:
+window	work	1	1	:*	3fec,141x40,0,0[141x25,0,0,0,141x14,0,26,2]
+window	work	2	0	:-	abfe,141x40,0,0,1
+state	work	
