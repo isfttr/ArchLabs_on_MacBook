@@ -48,6 +48,10 @@ set nofollowlinks
 
 set sortnumbers
 
+" Set sorting sequence
+set sort=type
+set sort=-mtime
+
 " Maximum number of changes that can be undone.
 
 set undolevels=100
