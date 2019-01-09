@@ -96,10 +96,11 @@ alias mestrado='cd && ~/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Pate
 alias cgit='cd && cd ~/GitHub'
 
 ## access config files
-alias i3conf='cd && cd .config/i3 && nvim config'
-alias qtconf='cd && cd .config/qutebrowser && nvim config.py'
+alias i3conf='cd && cd ~/.config/i3 && nvim config'
+alias qtconf='cd && cd ~/.config/qutebrowser && nvim config.py'
 alias xresconf='cd && nvim .Xresources'
-alias vimconf='cd && cd .config/nvim && nvim init.vim'
+alias vimconf='cd && cd ~/.config/nvim && nvim init.vim'
+alias newsconf='cd && cd ~/.newsboat && nvim urls'
 
 ## recurrent use
 alias fehbg='feh --bg-scale'
