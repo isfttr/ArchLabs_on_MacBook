@@ -1,7 +1,0 @@
-pane	work	1	:calendar	0	:	0	:/home/archmbp	1	calcurse	:bash
-pane	work	2	:vifm	1	:*	0	:/home/archmbp/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/Apresentacao_qualif	1	vifm	:bash
-pane	work	3	:vifm	0	:-	0	:/home/archmbp/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/Arquivo_Qualifs/Qualif_11	1	vifm	:bash
-window	work	1	0	:	c43d,159x45,0,0,0
-window	work	2	1	:*	bc3e,159x43,0,0,1
-window	work	3	0	:-	bc40,159x43,0,0,3
-state	work	

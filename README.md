@@ -70,7 +70,7 @@ The best way to get OneDrive to work is using the fork by
 [Skillion](https://github.com/skilion/onedrive) one worked
 for the first time but stopped working for some weird reason
 that I didn't fully comprehend. Known problem is a
-incompatibility issue between `curl 7.63` and `onedrive`.
+incompatibility between `curl 7.63` and `onedrive`.
 The workaround was to use the package `downgrade` to switch
 `curl 7.61`. 
 
