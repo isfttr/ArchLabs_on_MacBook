@@ -25,7 +25,7 @@ rerun `make && make install`.
     is having a higher consumption.
 - **Software installed**: st, vifm, rofi, dunst, neovim
     (with plugins working with no issues), mpv, flameshot,
-    calcurse.
+    calcurse, newsboat.
 - **User interface**: i3 gaps w/ gruvbox theme.
 
 ## What is not working yet
@@ -96,8 +96,8 @@ The workaround was to use the package `downgrade` to switch
 ## Coming soon
 
 - [x] list of features
-- [] music setup with ncmpcpp
-- [] mutt
+- [ ] music setup with ncmpcpp
+- [ ] mutt
 - [x] newsboat setup
 - [x] further information links
 
