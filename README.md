@@ -21,10 +21,11 @@ was beginning to get stressed about the loading times for
 the applications, for booting the system, for the high
 memory use, for having to run crappy programs and so on. On
 top of all that, I don't want to buy a new Apple computer in
-the foreseable future -if ever. MacBooks have been killed by
-Apple and nowadays they are just bad news in general. I can
-say that my current laptop is reminiscent of the golden days
-of Apple I plan to use this machine until it stops working. 
+the foreseable future - if ever. MacBooks have been trashed
+in the latest updates and are more expensive than any other
+option in the market. I can say that my current laptop is
+reminiscent of the golden days of Apple and I plan to use
+this machine until it stops working. 
 
 It is refreshing to use the same notebook but with a better
 perfomance and easier-to-use interface - aka terminal. I'm
@@ -32,7 +33,7 @@ adapting quickly to this new setup and might do the same to
 my iMac - well, I don't plan to comeback. I will continue to
 update this setup until everything is working.
 
-### Screenshots of the setup
+### Screenshots of the current setup
 
 ![ArchLabs_on_MacBook](ArchLabs_on_MacBook.png) ![Vifm and
 Neovim](vifm_ArchLabs_on_MacBook.png)
