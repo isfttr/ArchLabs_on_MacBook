@@ -14,6 +14,20 @@ and might show too big on your system. To change that, go
 to the configuration file and make the wanted changes and
 rerun `make && make install`.
 
+## Screenshot of the setup
+![ArchLabs_on_MacBook](ArchLabs_on_MacBook.png)
+![Vifm and Neovim](vifm_ArchLabs_on_MacBook.png)
+## List of features
+
+- **Hardware that is fully working**: keyboard (and light),
+    monitor brightness levels, sound controls, fan.
+- **Hardware that is working but not ideally**: the battery
+    is having a higher consumption.
+- **Software installed**: st, vifm, rofi, dunst, neovim
+    (with plugins working with no issues), mpv, flameshot,
+    calcurse.
+- **User interface**: i3 gaps w/ gruvbox theme.
+
 ## What is not working yet
 
 - **Keyboard**: the function keys for music are not assigned
@@ -25,7 +39,7 @@ rerun `make && make install`.
     not syncing. If your are not going to use mutt, than you
     shoul try `mailspring` that has a nice gui and works
     fine with gmail in this computer.
-
+    
 ## Quick fixes
 
 ### Keyboard light
@@ -33,6 +47,8 @@ rerun `make && make install`.
 It was a lot easier than I thought. Just search for `yay -s
 kbdlight` and install it. The commands are really simple,
 just read the [git page](https://github.com/WhyNotHugo/kbdlight).
+Actually, I implement a shortcut to the i3 config file so
+you can just use the buttons on the keyboard.
 
 ### Cedilla for portuguese/spanish
 
@@ -79,10 +95,11 @@ The workaround was to use the package `downgrade` to switch
 
 ## Coming soon
 
-- list of features
-- music setup
-- newsboat setup
-- further information links
+- [x] list of features
+- [] music setup with ncmpcpp
+- [] mutt
+- [x] newsboat setup
+- [x] further information links
 
 ## Further information
 
