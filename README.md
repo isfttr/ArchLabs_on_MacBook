@@ -14,7 +14,7 @@ and might show too big on your system. To change that, go
 to the configuration file and make the wanted changes and
 rerun `make && make install`.
 
-## Screenshot of the setup
+## Screenshots of the setup
 ![ArchLabs_on_MacBook](ArchLabs_on_MacBook.png)
 ![Vifm and Neovim](vifm_ArchLabs_on_MacBook.png)
 ## List of features
@@ -24,7 +24,7 @@ rerun `make && make install`.
 - **Hardware that is working but not ideally**: the battery
     is having a higher consumption.
 - **Software installed**: st, vifm, rofi, dunst, neovim
-    (with plugins working with no issues), mpv, flameshot,
+    (using vim-plug with no issues), mpv, flameshot,
     calcurse, newsboat.
 - **User interface**: i3 gaps w/ gruvbox theme.
 
