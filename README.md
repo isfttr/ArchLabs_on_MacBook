@@ -60,7 +60,10 @@ Neovim](vifm_ArchLabs_on_MacBook.png)
     not syncing. If your are not going to use mutt, than you
     shoul try `mailspring` that has a nice gui and works
     fine with gmail in this computer.
-    
+- **Wireless**: I know for a fact that this machine supports
+    5GHz wifi but I ran `iwlist freq` and it only shows
+    2.4GHz. As of the time of this writing, I don't have a
+    clue on how to make it recognize 5GHz wifi.
 
 ## Quick fixes
 
