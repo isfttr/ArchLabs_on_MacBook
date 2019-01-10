@@ -41,7 +41,7 @@ endif
 Plug 'tbastos/vim-lua'
 
 " Solarized
-Plug 'altercation/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
 
 " syntastic
 Plug 'vim-syntastic/syntastic'
@@ -153,11 +153,12 @@ set list listchars=tab:>>,trail:~
 "let g:jinx_colors = 'midnight'
 
 try
-    colorscheme solarized
+    colorscheme gruvbox
 catch
     colorscheme jinx
 endtry
 
+let g:airline_theme='jellybeans'
 
 if $TERM !=? 'linux'
     set termguicolors

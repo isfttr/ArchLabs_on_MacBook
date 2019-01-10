@@ -16,13 +16,10 @@ rerun `make && make install`.
 
 ## What is not working yet
 
-- **Keyboard**: it is backlit but currently that function is
-    not available. Didn't try to solve this one yet because
-    it is not a huge problem. The other problem is that the
-    function keys for music are not assigned to any music
-    player since I'm running `mpv`. There might be way to
-    setup the function keys to play/pause music in mpv using
-    the keys but I didn't try to setup that yet.
+- **Keyboard**: the function keys for music are not assigned
+    to any music player since I'm running `mpv`. There might be
+    way to setup the function keys to play/pause music in mpv
+    using the keys but I didn't try to setup that yet.
 - **Email**: I'm trying to set up `mutt` to properly run but
     currently having problems with `offlineimap` so it is
     not syncing. If your are not going to use mutt, than you
@@ -30,6 +27,12 @@ rerun `make && make install`.
     fine with gmail in this computer.
 
 ## Quick fixes
+
+### Keyboard light
+
+It was a lot easier than I thought. Just search for `yay -s
+kbdlight` and install it. The commands are really simple,
+just read the [git page](https://github.com/WhyNotHugo/kbdlight).
 
 ### Cedilla for portuguese/spanish
 

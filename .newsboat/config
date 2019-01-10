@@ -73,9 +73,9 @@ highlight article     ":.*\\(link\\)$"                      color74  default
 highlight article     ":.*\\(image\\)$"                     color74  default
 highlight article     ":.*\\(embedded flash\\)$"            color74  default
 
-color listnormal cyan default
+color listnormal green default
 color listfocus black yellow standout bold
 color listnormal_unread blue default
 color listfocus_unread yellow default bold
 color info red black bold
-color article cyan default
+color article white default
