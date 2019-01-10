@@ -78,7 +78,7 @@ alias i3l='rofi_run -l'
 ## for applications
 alias r='ranger'
 alias n='nnn'
-alias ydl='youtube-dl'
+alias ydl='youtube-dl -i'
 alias vifm='uskb && vifm'
 
 # copying in NNN
