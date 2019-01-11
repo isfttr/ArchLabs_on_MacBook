@@ -22,6 +22,9 @@ Plug 'flazz/vim-colorschemes'
 " Easy-motion
 Plug 'easymotion/vim-easymotion'
 
+" Nvim-R
+Plug 'jalvesaq/Nvim-R'
+
 " Markdown
 Plug 'plasticboy/vim-markdown'
 
@@ -191,7 +194,7 @@ endif
 " ------ commands ------
 
 command! D Explore
-command! R call <SID>ranger()
+"command! R call <SID>ranger()
 command! Q call <SID>quitbuffer()
 command! -nargs=1 B :call <SID>bufferselect("<args>")
 command! W execute 'silent w !sudo tee % >/dev/null' | edit!
@@ -199,7 +202,7 @@ command! W execute 'silent w !sudo tee % >/dev/null' | edit!
 " ------ basic maps ------
 
 " open ranger as a file chooser using the function below
-nnoremap <leader>r :call <SID>ranger()<CR>
+"nnoremap <leader>r :call <SID>ranger()<CR>
 
 " match string to switch buffer
 nnoremap <Leader>b :let b:buf = input('Match: ')<Bar>call <SID>bufferselect(b:buf)<CR>
@@ -500,10 +503,25 @@ let g:limelight_priority = -1
 
 " vim-markdown
 " change folding style
-
-  let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_folding_style_pythonic = 1
 
 " set header folding level
+let g:vim_markdown_folding_level = 1
 
-  :let g:vim_markdown_folding_level = 1
+" Nvim-R -----------
+" highlighting chunks
+let rrst_syn_hl_chunk = 1
+let rmd_syn_hl_chunk = 1
 
+" start libraries
+let R_start_libs = 'base,stats,graphics,grDevices,utils,methods'
+
+" latex options
+let R_latexcmd = ['pdflatex']
+let R_openhtml = 1
+let R_openpdf = 1
+
+" mappings
+nmap <LocalLeader>sr <Plug>RStart
+imap <LocalLeader>sr <Plug>RStart
+vmap <LocalLeader>sr <Plug>RStart
