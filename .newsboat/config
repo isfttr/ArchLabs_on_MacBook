@@ -1,7 +1,7 @@
 # author:  moparx     - http://moparx.com/configs
 # date:    05/08/2013 - 18:12 EDT
 # vim: set ai et fenc=utf-8 ft=conf nu si sts=0 sw=4 ts=8 tw=0 :
-# ----------------------------------------------------------------------
+# ----------------------------------------------------------
 
 #auto-reload yes
 browser qutebrowser
@@ -22,7 +22,7 @@ reload-threads 2
 show-read-feeds no
 
 
-# binds ----------------------------------------------------------------
+# binds ---------------------------------------------------
 
 unbind-key t
 unbind-key R
@@ -48,14 +48,14 @@ bind-key a toggle-article-read
 bind-key x pb-delete
 bind-key Z sort
 
-# hide articles matching: ---------------------------------------------
+# hide articles matching: ----------------------------------
 
 ignore-article "*" "title =~ \"Sponsor\""
 ignore-article "*" "title =~ \"Advertisement\""
 ignore-mode "display"
 
 
-# formatting and colorization ------------------------------------------
+# formatting and colorization ------------------------------
 
 articlelist-format "%4i %f %D  %?T?|%-17T| ?%t"
 
@@ -79,3 +79,10 @@ color listnormal_unread blue default
 color listfocus_unread yellow default bold
 color info red black bold
 color article white default
+
+# adding functionality with macros -------------------------
+browser linkhandler
+# almost never open youtube again function
+macro p set browser "i3 exec mpv"; open-in-browser ; set browser linkhandler
+macro w set browser "w3m"; open-in-browser ; set browser linkhandler
+macro r set browser "rtv"; open-in-browser ; set browser linkhandler
