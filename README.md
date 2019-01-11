@@ -61,9 +61,18 @@ Neovim](vifm_ArchLabs_on_MacBook.png)
     shoul try `mailspring` that has a nice gui and works
     fine with gmail in this computer.
 - **Wireless**: I know for a fact that this machine supports
-    5GHz wifi but I ran `iwlist freq` and it only shows
-    2.4GHz. As of the time of this writing, I don't have a
-    clue on how to make it recognize 5GHz wifi.
+    5GHz wifi because I used multiple times on MacOS and it
+    was fine. Actually, first ArchLabs installation it was
+    using a 5GHz network with no problem. But I ran `iwlist
+    freq` and it only shows 2.4GHz. As of the time of this
+    writing, I don't have a clue on how to make it recognize
+    5GHz wifi. Another problem that is ocurring on this
+    other wifi, is that it is not connecting to the
+    internet even though it is showing in the list when
+    using `nmcli connection show`.  It will not connect
+    through the `nmcli` command nor through the `dmenu`
+    alternative - actually the same thing. I don't know if
+    the two problems are related.
 
 ## Quick fixes
 
