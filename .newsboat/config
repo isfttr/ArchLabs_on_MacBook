@@ -80,9 +80,12 @@ color listfocus_unread yellow default bold
 color info red black bold
 color article white default
 
+# External-url-viewer
+external-url-viewer "urlview"
 # adding functionality with macros -------------------------
 browser linkhandler
 # almost never open youtube again function
+macro , set browser "qutebrowser"; open-in-browser ; set browser linkhandler
 macro p set browser "i3 exec mpv"; open-in-browser ; set browser linkhandler
 macro w set browser "w3m"; open-in-browser ; set browser linkhandler
 macro r set browser "rtv"; open-in-browser ; set browser linkhandler
