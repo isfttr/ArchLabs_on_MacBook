@@ -104,3 +104,5 @@ alias newsconf='cd && cd ~/.newsboat && nvim urls'
 
 ## recurrent use
 alias fehbg='feh --bg-scale'
+alias weather='curl wttr.in' # requires curl
+alias fire='aafire -driver curses -dim' # requires aalib

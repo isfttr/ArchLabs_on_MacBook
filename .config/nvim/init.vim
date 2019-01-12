@@ -521,7 +521,23 @@ let R_latexcmd = ['pdflatex']
 let R_openhtml = 1
 let R_openpdf = 1
 
-" mappings
-nmap <LocalLeader>sr <Plug>RStart
-imap <LocalLeader>sr <Plug>RStart
-vmap <LocalLeader>sr <Plug>RStart
+"  mappings
+"nmap <Leader>rf <Plug>RStart
+"imap <Leader>rf <Plug>RStart
+"vmap <Leader>rf <Plug>RStart
+"
+"nmap <Leader>rw <Plug>RSave
+"imap <Leader>rw <Plug>RSave
+"vmap <Leader>rw <Plug>RSave
+"
+"nmap <Leader>rs <Plug>RSendSelection
+"imap <Leader>rs <Plug>RSendSelection
+"vmap <Leader>rs <Plug>RSendSelection
+"
+"nmap <Leader>rb <Plug>RSendMBlock
+"imap <Leader>rb <Plug>RSendMBlock
+"vmap <Leader>rb <Plug>RSendMBlock
+"
+"nmap <Leader>ri <Plug>RSendFile
+"imap <Leader>ri <Plug>RSendFile
+"vmap <Leader>ri <Plug>RSendFile

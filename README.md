@@ -46,116 +46,25 @@ Neovim](vifm_ArchLabs_on_MacBook.png)
     is having a higher consumption.
 - **Software installed**: st, vifm, rofi, dunst, neovim
     (using vim-plug with no issues), mpv, flameshot,
-    calcurse, newsboat.
+    calcurse, newsboat, rtv.
 - **User interface**: i3 gaps w/ gruvbox theme.
 
-## What is not working yet
+## Quick fixes and tips
 
-- **Keyboard**: the function keys for music are not assigned
-    to any music player since I'm running `mpv`. There might
-    be way to setup the function keys to play/pause music in
-    mpv using the keys but I didn't try to setup that yet.
-- **Email**: I'm trying to set up `mutt` to properly run but
-    currently having problems with `offlineimap` so it is
-    not syncing. If your are not going to use mutt, than you
-    shoul try `mailspring` that has a nice gui and works
-    fine with gmail in this computer.
-- **Wireless**: I know for a fact that this machine supports
-    5GHz wifi because I used multiple times on MacOS and it
-    was fine. Actually, first ArchLabs installation it was
-    using a 5GHz network with no problem. But I ran `iwlist
-    freq` and it only shows 2.4GHz. As of the time of this
-    writing, I don't have a clue on how to make it recognize
-    5GHz wifi. Another problem that is ocurring on this
-    other wifi, is that it is not connecting to the
-    internet even though it is showing in the list when
-    using `nmcli connection show`.  It will not connect
-    through the `nmcli` command nor through the `dmenu`
-    alternative - actually the same thing. I don't know if
-    the two problems are related.
-
-## Quick fixes
-
-This a list of quick fixes to the problems I found during
-the installation and configuration of ArchLabs on my
-machine.
-
-### Use `st` instead of `urxvt`
-
-When I first installed ArchLabs I used the urxvt terminal
-but I found out about the problems it had over color
-compatibility -- syntax on neovim was not working.  The
-workaround urxvt was to install st from
-[LukeSmithxyz](https://github.com/LukeSmithxyz/st) which
-pretty much worked out of the box. The font is set to 16 and
-might show too big on your system. To change that, go to the
-configuration file and make the wanted changes and rerun
-`make && make install`.
-
-### Keyboard light
-
-It was a lot easier than I thought. Just search for `yay -s
-kbdlight` and install it. The commands are really simple,
-just read the [git
-page](https://github.com/WhyNotHugo/kbdlight).  Actually, I
-implement a shortcut to the i3 config file so you can just
-use the buttons on the keyboard.
-
-### Cedilla for portuguese/spanish
-
-If you made the installation using en_US.UTF-8, like me,
-probably the cedilla will not be working when pushing "' +
-c".  The workaround for me was to use the command `inkb`
-listed on the
-[.bashrc](https://github.com/isetfiretotherain/ArchLabs_on_MacBook/blob/master/dotfiles/.bashrc)
-together with the creation of the
-[~/.XCompose](https://github.com/isetfiretotherain/ArchLabs_on_MacBook/blob/master/dotfiles/.XCompose)
-file.
-
-### Wireless
-
-The network device is BCM4331 which means it needs the
-`b43-firmware` that can be installed via `yay -s`. When
-running `iwconfig` and getting the `no wireless extensions`
-response, the quickest fix was found in this
-[question](https://askubuntu.com/questions/470153/no-wireless-when-install-14-04-on-macbook-pro).
-After installing the firmware, run the following commands
-`sudo modprobe -rv b43` and `sudo modprobe -v b43`. Test the
-`iwconfig` again.
-
-### Battery life
-
-The battery has improved hugely over the week and after the
-modifications listed by [Michael
-Chladek](https://mchladek.me/post/arch-mbp/).  Namely,
-installing `powertop`, `thermald` and `cpupower` just like
-he described. When running `powertop` for the first time,
-the screen will go black for a few minutes for a couple of
-times - don't freak out. After installing everything and
-enabling the `.service`'s, reboot. I also installed
-`cpupower-gui` so I could easily set the max clock for the
-CPU at 2.9 GHz, instead of 3.1. As far as I researched,
-`thermald` doesn't need further configurations, you just
-need to enable it.
-
-### OneDrive
-
-The best way to get OneDrive to work is using the fork by
-[abraunegg](https://github.com/abraunegg/onedrive). The
-[Skillion](https://github.com/skilion/onedrive) one worked
-for the first time but stopped working for some weird reason
-that I didn't fully comprehend. Known problem is a
-incompatibility between `curl 7.63` and `onedrive`.  The
-workaround was to use the package `downgrade` to switch
-`curl 7.61`. 
+This section is located in a [wiki
+page](https://github.com/isetfiretotherain/ArchLabs_on_MacBook/wiki)
+for your convenience.
 
 ## Coming soon
 
 - [ ] music setup with ncmpcpp 
-- [ ] mutt 
+- [ ] mutt
 - [x] list of features
 - [x] newsboat setup 
 - [x] further information links
+
+For more information on new features visit the [issues
+page](https://github.com/isetfiretotherain/ArchLabs_on_MacBook/issues).
 
 ## Further information
 
