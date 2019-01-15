@@ -535,7 +535,7 @@ let R_openpdf = 1
 :nmap W :wq<CR>
 
 " mappgings for git
-nnoremap <Leader>g :Git <CR>
+nnoremap <Leader>g :Git <Space>
 nnoremap <Leader>gs :Gstatus <CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>gd :Gdiff<CR>
