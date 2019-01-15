@@ -49,7 +49,10 @@ Plug 'tpope/vim-fugitive'
 " asynchronous build and test dispatcher
 Plug 'tpope/vim-dispatch'
 
-" Solarized
+" Gdiff on the fly
+Plug 'airblade/vim-gitgutter'
+
+""Solarized
 "Plug 'altercation/vim-colors-solarized'
 
 " syntastic
@@ -531,8 +534,11 @@ let R_openhtml = 1
 let R_openpdf = 1
 
 " paste on the next line
-:nmap P :pu<CR>
-:nmap W :wq<CR>
+nmap P :pu<CR>
+nmap W :wq<CR>
+nmap <Leader>w :w<CR>
+nmap Q :q!<CR>
+nmap <Leader>q :q<CR>
 
 " mappgings for git
 nnoremap <Leader>g :Git <Space>
@@ -544,5 +550,19 @@ nnoremap <Leader>gr :Gread<CR>
 nnoremap <Leader>gw :Gwrite<CR><CR>
 nnoremap <Leader>go :Gcheckout<Space>
 nnoremap <Leader>gb :Gbranch<Space>
-nnoremap <Leader>gps :Dispatch! git push<CR>
-nnoremap <Leader>gpl :Dispatch! git pull<CR>
+nnoremap <Leader>gps :Git push<CR>
+nnoremap <Leader>gpl :Git pull<CR>
+
+nnoremap <Leader>gg :GitGutterToggle<CR>
+nmap <Leader>ha <Plug>GitGutterStageHunk
+nmap <Leader>hr <Plug>GitGutterUndoHunk
+nmap <Leader>hv <Plug>GitGutterPreviewHunk
+nmap <Leader>hf :GitGutterFold<CR>
+
+" mappings for goyo and limelight
+nnoremap <Leader>gy :Goyo<CR>
+nnoremap <Leader>gl :Limelight<CR>
+
+" mappings for vim-plug
+nnoremap <Leader>pi :PlugInstall<CR>
+nnoremap <Leader>pu :PlugUpdate<CR>
