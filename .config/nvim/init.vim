@@ -46,6 +46,9 @@ Plug 'tbastos/vim-lua'
 " git wrapper
 Plug 'tpope/vim-fugitive'
 
+" asynchronous build and test dispatcher
+Plug 'tpope/vim-dispatch'
+
 " Solarized
 "Plug 'altercation/vim-colors-solarized'
 
@@ -530,3 +533,16 @@ let R_openpdf = 1
 " paste on the next line
 :nmap P :pu<CR>
 :nmap W :wq<CR>
+
+" mappgings for git
+nnoremap <Leader>g :Git <CR>
+nnoremap <Leader>gs :Gstatus <CR>
+nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>ge :Gedit<CR>
+nnoremap <Leader>gr :Gread<CR>
+nnoremap <Leader>gw :Gwrite<CR><CR>
+nnoremap <Leader>go :Gcheckout<Space>
+nnoremap <Leader>gb :Gbranch<Space>
+nnoremap <Leader>gps :Dispatch! git push<CR>
+nnoremap <Leader>gpl :Dispatch! git pull<CR>
