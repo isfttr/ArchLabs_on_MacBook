@@ -43,6 +43,9 @@ endif
 " Vim-lua
 Plug 'tbastos/vim-lua'
 
+" git wrapper
+Plug 'tpope/vim-fugitive'
+
 " Solarized
 "Plug 'altercation/vim-colors-solarized'
 
@@ -95,6 +98,8 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Initialize plugin system
 call plug#end()
 
+" ---------------------------- END OF PLUGINS -------------
+"
 " Sane vim defaults for ArchLabs
 
 " Arch defaults
@@ -521,23 +526,6 @@ let R_latexcmd = ['pdflatex']
 let R_openhtml = 1
 let R_openpdf = 1
 
-"  mappings
-"nmap <Leader>rf <Plug>RStart
-"imap <Leader>rf <Plug>RStart
-"vmap <Leader>rf <Plug>RStart
-"
-"nmap <Leader>rw <Plug>RSave
-"imap <Leader>rw <Plug>RSave
-"vmap <Leader>rw <Plug>RSave
-"
-"nmap <Leader>rs <Plug>RSendSelection
-"imap <Leader>rs <Plug>RSendSelection
-"vmap <Leader>rs <Plug>RSendSelection
-"
-"nmap <Leader>rb <Plug>RSendMBlock
-"imap <Leader>rb <Plug>RSendMBlock
-"vmap <Leader>rb <Plug>RSendMBlock
-"
-"nmap <Leader>ri <Plug>RSendFile
-"imap <Leader>ri <Plug>RSendFile
-"vmap <Leader>ri <Plug>RSendFile
+" paste on the next line
+:nmap P :pu<CR>
+:nmap W :wq<CR>
