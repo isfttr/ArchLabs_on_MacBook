@@ -26,6 +26,9 @@ config.bind("er", "spawn --userscript readability")
 config.bind("ta", "tab-take 2/1")  #take forewards, f win1
 config.bind("tA", "tab-take 1/1")  #take backwards, f win2
 
+config.bind("ei", "spawn setxkbmap -layout us -variant intl")
+config.bind("eu", "spawn setxkbmap -layout us -variant mac")
+
 # When to show favicons in the tab bar.
 # Type: String
 # Valid values:
