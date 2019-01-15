@@ -106,3 +106,7 @@ alias newsconf='cd && cd ~/.newsboat && nvim urls'
 alias fehbg='feh --bg-scale'
 alias weather='curl wttr.in' # requires curl
 alias fire='aafire -driver curses -dim' # requires aalib
+
+## faster encryption
+alias encrypt='openssl aes-256-cbc -a -pbkdf2' #-a show as text
+alias decrypt='openssl aes-256-cbc -d -a -pbkdf2' 
