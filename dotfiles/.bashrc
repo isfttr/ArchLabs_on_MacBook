@@ -94,6 +94,7 @@ alias down='cd && cd ~/Downloads/ && vifm'
 alias oned='cd && cd ~/OneDrive/Workspace/ && vifm'
 alias mestrado='cd && ~/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/'
 alias cgit='cd && cd ~/GitHub'
+alias brain='cd && cd ~/OneDrive/Workspace/Brain_Dump/'
 
 ## access config files
 alias i3conf='cd && cd ~/.config/i3 && nvim config'
@@ -110,3 +111,7 @@ alias fire='aafire -driver curses -dim' # requires aalib
 ## faster encryption
 alias encrypt='openssl aes-256-cbc -a -pbkdf2' #-a show as text
 alias decrypt='openssl aes-256-cbc -d -a -pbkdf2' 
+
+## markdown-pp/pandoc shortcuts
+alias brainmdpp='markdown-pp braindump_index.mdpp -o braindump_index.md && pandoc -o braindump_index.html braindump_index.md'
+alias wikimdpp='markdown-pp wiki_index.mdpp -o wiki_index.md && pandoc -o wiki_index.html wiki_index.md'
