@@ -5,34 +5,22 @@ set rtp+=~/.local/share/nvim/plugged
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+" Base plugins
+"
+Plug 'tbastos/vim-lua'
+Plug 'vim-syntastic/syntastic'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'sheerun/vim-polyglot'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'flazz/vim-colorschemes'
 Plug 'junegunn/vim-easy-align'
-
-" goyo - centering the text + focus
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-
-" i3-vim syntax
-Plug 'mboughaba/i3config.vim'
-
-" Colorschemes
-Plug 'flazz/vim-colorschemes'
-
-" easy file browsing
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-
-" Easy-motion
 Plug 'easymotion/vim-easymotion'
-
-" Nvim-R; adds rstudio capabilities to neovim
-Plug 'jalvesaq/Nvim-R'
-
-" Markdown syntax
-Plug 'plasticboy/vim-markdown'
-
-" LaTeX syntax
-Plug 'vim-latex/vim-latex'
 
 " Deoplete and snippets
 if has('nvim')
@@ -43,41 +31,18 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-" Vim-lua support
-Plug 'tbastos/vim-lua'
+" Syntax support
+Plug 'jalvesaq/Nvim-R'
+Plug 'plasticboy/vim-markdown'
+Plug 'vim-latex/vim-latex'
+Plug 'mboughaba/i3config.vim'
 
-" git wrapper
+" Git
 Plug 'tpope/vim-fugitive'
-
-" asynchronous build and test dispatcher
 Plug 'tpope/vim-dispatch'
-
-" Gdiff on the fly
 Plug 'airblade/vim-gitgutter'
 
-
-" syntastic
-Plug 'vim-syntastic/syntastic'
-
-" vim-surround
-Plug 'tpope/vim-surround'
-
-" vim-airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Auto-pairs
-Plug 'jiangmiao/auto-pairs'
-
-" polyglot
-Plug 'sheerun/vim-polyglot'
-"
-" relative numbers
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-"
 " ----- to add later when needed ---------
-""Solarized
-"Plug 'altercation/vim-colors-solarized'
 " Plug 'scrooloose/nerdcommenter'
 " PLug 'yggdroot/indentline'
 "
@@ -583,3 +548,8 @@ nmap <Leader>hf :GitGutterFold<CR>
 
 nnoremap <Leader>pi :PlugInstall<CR>
 nnoremap <Leader>pu :PlugUpdate<CR>
+
+" mapping to change the keymaps ---
+"
+nnoremap <Leader>ei :!setxkbmap -layout us -variant intl<CR><CR>
+nnoremap <Leader>eu :!setxkbmap -layout us -variant mac<CR><CR>
