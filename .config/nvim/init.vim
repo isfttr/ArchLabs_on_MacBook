@@ -19,16 +19,19 @@ Plug 'mboughaba/i3config.vim'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 
+" easy file browsing
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
 " Easy-motion
 Plug 'easymotion/vim-easymotion'
 
-" Nvim-R
+" Nvim-R; adds rstudio capabilities to neovim
 Plug 'jalvesaq/Nvim-R'
 
-" Markdown
+" Markdown syntax
 Plug 'plasticboy/vim-markdown'
 
-" LaTeX
+" LaTeX syntax
 Plug 'vim-latex/vim-latex'
 
 " Deoplete and snippets
@@ -40,7 +43,7 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-" Vim-lua
+" Vim-lua support
 Plug 'tbastos/vim-lua'
 
 " git wrapper
@@ -52,8 +55,6 @@ Plug 'tpope/vim-dispatch'
 " Gdiff on the fly
 Plug 'airblade/vim-gitgutter'
 
-""Solarized
-"Plug 'altercation/vim-colors-solarized'
 
 " syntastic
 Plug 'vim-syntastic/syntastic'
@@ -71,7 +72,12 @@ Plug 'jiangmiao/auto-pairs'
 " polyglot
 Plug 'sheerun/vim-polyglot'
 "
-" to add later when needed
+" relative numbers
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+"
+" ----- to add later when needed ---------
+""Solarized
+"Plug 'altercation/vim-colors-solarized'
 " Plug 'scrooloose/nerdcommenter'
 " PLug 'yggdroot/indentline'
 "
@@ -83,7 +89,6 @@ Plug 'sheerun/vim-polyglot'
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Using a non-master branch
@@ -121,15 +126,16 @@ set clipboard^=unnamed,unnamedplus
 set modeline           " enable vim modelines
 set nohlsearch           " highlight search items
 set incsearch          " searches are performed as you type
-set number             " enable line numbers
 set confirm            " ask confirmation like save before quit.
 set wildmenu           " Tab completion menu when using command mode
 set expandtab          " Tab key inserts spaces not tabs
 set softtabstop=4      " spaces to enter for each tab
 set shiftwidth=4       " amount of spaces for indentation
 set shortmess+=aAcIws  " Hide or shorten certain messages
+set number relativenumber
 
 set tw=60
+set fo=cqt
 
 set ignorecase
 set cursorline          "highlight line under the cursor
@@ -146,7 +152,7 @@ let g:python3_host_pro=$PYENV_ROOT.'/versions/neovim-g3/bin/python'
 autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
 autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown
 
-" 
+"
 " ------ leader mapping ------
 
 let g:mapleader = ","
@@ -222,14 +228,13 @@ nnoremap <Leader>b :let b:buf = input('Match: ')<Bar>call <SID>bufferselect(b:bu
 inoremap <silent><C-v> <Esc>:set paste<CR>a<C-r>+<Esc>:set nopaste<CR>a
 
 " change windows with ctrl+(hjkl)
-nnoremap <C-J> <C-W><C-J>
+nnoremap <C-j> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " alt defaults
 nnoremap 0 ^
-nnoremap Y y$
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap <Tab> ==j
@@ -239,7 +244,7 @@ vnoremap > >gv
 vnoremap < <gv
 
 " toggle line numbers, nn (no number)
-nnoremap <silent> <Leader>nn :set number!
+""nnoremap <silent> <Leade> r>nn :set number!<CR>
 
 " j = gj :: k = gk  while preserving numbered jumps eg. 12j
 nnoremap <buffer><silent><expr>j v:count ? 'j' : 'gj'
@@ -249,12 +254,13 @@ nnoremap <buffer><silent><expr>k v:count ? 'k' : 'gk'
 nnoremap <silent> <Leader>tt :terminal<CR>
 
 " tab control
+" default settings
 nnoremap <silent> <M-j> :tabmove -1<CR>
 nnoremap <silent> <M-k> :tabmove +1<CR>
 nnoremap <silent> <Leader>te :tabnew<CR>
 nnoremap <silent> <Leader>tn :tabnext<CR>
-nnoremap <silent> <Leader>tf :tabfirst<CR>
 nnoremap <silent> <Leader>tp :tabprevious<CR>
+nnoremap <silent> <Leader>tf :tabfirst<CR>
 
 " close current buffer and/or tab
 nnoremap <silent> <Leader>q :B<CR>:silent tabclose<CR>gT
@@ -273,10 +279,11 @@ noremap Y y$
 " ------ additional maps ---
 "  easier pane navigation
 
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-h> <C-w>h
-map <C-l> <C-w>l
+""nnoremap <C-w> <C-w>
+""nnoremap <C-j> <C-w>j
+""nnoremap <C-k> <C-w>k
+""nnoremap <C-h> <C-w>h
+""nnoremap <C-l> <C-w>l
 
 " ------ autocmd ------
 
@@ -449,10 +456,13 @@ endfunction
 "    endfor
 "    redraw!
 "endfunction
-
-
-" ------------- plugin configurations
 "
+"----------- Additional mappings for editing
+"
+"
+
+
+" ------------- plugin configurations ------------
 " deoplete options
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete=1
@@ -464,7 +474,8 @@ inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 " Close the documentation window when completion is done
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
-" syntastic
+" syntastic -----------
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -478,7 +489,8 @@ let g:syntastic_check_on_wq = 0
 " NERDTreeToggle
 map <C-n> :NERDTreeToggle<CR>
 
-" easymotion
+" easymotion -----------
+
 " hjkl motions
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
@@ -487,7 +499,7 @@ map <Leader>h <Plug>(easymotion-linebackward)
 
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
-" limelight
+" Goyo & Limelight -----------
 
 " Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
@@ -513,7 +525,12 @@ let g:limelight_eop = '\ze\n^\s'
 "   Set it to -1 not to overrule hlsearch
 let g:limelight_priority = -1
 
-" vim-markdown
+" mappings for goyo and limelight
+nnoremap <Leader>gy :Goyo<CR>
+nnoremap <Leader>gl :Limelight<CR>
+
+" vim-markdown -----------
+
 " change folding style
 let g:vim_markdown_folding_style_pythonic = 1
 
@@ -521,6 +538,7 @@ let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_folding_level = 1
 
 " Nvim-R -----------
+"
 " highlighting chunks
 let rrst_syn_hl_chunk = 1
 let rmd_syn_hl_chunk = 1
@@ -528,19 +546,21 @@ let rmd_syn_hl_chunk = 1
 " start libraries
 let R_start_libs = 'base,stats,graphics,grDevices,utils,methods'
 
-" latex options
+" latex options -----------
+
 let R_latexcmd = ['pdflatex']
 let R_openhtml = 1
 let R_openpdf = 1
 
-" paste on the next line
+" paste on the next line -----------
+
 nmap P :pu<CR>
 nmap W :wq<CR>
 nmap <Leader>w :w<CR>
 nmap Q :q!<CR>
-nmap <Leader>q :q<CR>
 
-" mappgings for git
+" mappgings for git -----------
+
 nnoremap <Leader>g :Git <Space>
 nnoremap <Leader>gs :Gstatus <CR>
 nnoremap <Leader>gc :Gcommit<CR>
@@ -559,10 +579,7 @@ nmap <Leader>hr <Plug>GitGutterUndoHunk
 nmap <Leader>hv <Plug>GitGutterPreviewHunk
 nmap <Leader>hf :GitGutterFold<CR>
 
-" mappings for goyo and limelight
-nnoremap <Leader>gy :Goyo<CR>
-nnoremap <Leader>gl :Limelight<CR>
+" mappings for vim-plug -----------
 
-" mappings for vim-plug
 nnoremap <Leader>pi :PlugInstall<CR>
 nnoremap <Leader>pu :PlugUpdate<CR>
