@@ -91,9 +91,8 @@ alias inkb='setxkbmap -layout us -variant intl'
 ## to directories
 alias music='cd && cd ~/OneDrive/Music/ && vifm'
 alias down='cd && cd ~/Downloads/ && vifm'
-alias oned='cd && cd ~/OneDrive/Workspace/ && vifm'
+alias oned='cd && cd ~/OneDrive/Workspace/ && onedrive --synchronize'
 alias mestrado='cd && ~/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/'
-alias cgit='cd && cd ~/GitHub'
 alias brain='cd && cd ~/OneDrive/Workspace/Brain_Dump/'
 
 ## access config files
@@ -101,6 +100,7 @@ alias i3conf='cd && cd ~/.config/i3 && nvim config'
 alias qtconf='cd && cd ~/.config/qutebrowser && nvim config.py'
 alias xresconf='cd && nvim .Xresources'
 alias vimconf='cd && cd ~/.config/nvim && nvim init.vim'
+alias vifmconf='cd && cd ~/.config/vifm && nvim vifmrc'
 alias newsconf='cd && cd ~/.newsboat && nvim urls'
 
 ## recurrent use
