@@ -71,15 +71,13 @@ export TERM=st-256color
 
 # aliases below
 #alias vim='nvim'
-alias sbash='cd && source .bashrc'
-alias vbash='cd && nvim .bashrc'
+alias sb='cd && source .bashrc'
+alias vb='cd && nvim .bashrc'
 alias i3l='rofi_run -l'
 
 ## for applications
-alias r='ranger'
-alias n='nnn'
 alias ydl='youtube-dl -i'
-alias vifm='uskb && vifm'
+alias f='uskb && vifm'
 
 # copying in NNN
 # alias ncp='cat ~/.nnncp > .last_copied_file'
@@ -93,8 +91,7 @@ alias music='cd && cd ~/OneDrive/Music/ && vifm'
 alias down='cd && cd ~/Downloads/ && vifm'
 alias oned='cd && cd ~/OneDrive/Workspace/ && onedrive --synchronize'
 alias mestrado='cd && ~/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/'
-alias brain='cd && cd ~/OneDrive/Workspace/Brain_Dump/'
-
+alias brain='cd && cd ~/OneDrive/Workspace/Brain_Dump/braindump/'
 ## access config files
 alias i3conf='cd && cd ~/.config/i3 && nvim config'
 alias qtconf='cd && cd ~/.config/qutebrowser && nvim config.py'
