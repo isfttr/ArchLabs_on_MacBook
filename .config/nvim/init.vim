@@ -149,9 +149,9 @@ if $TERM !=? 'linux'
     set termguicolors
 
     " true colors in terminals (neovim doesn't need this)
-    if !has('nvim') && !($TERM =~? 'xterm' || &term =~? 'xterm')
-        let $TERM = 'xterm-256color'
-        let &term = 'xterm-256color'
+    if !has('nvim') && !($TERM =~? 'st' || &term =~? 'xterm')
+        let $TERM = 'st-256color'
+        let &term = 'st-256color'
     endif
 
     if has('multi_byte') && $TERM !=? 'linux'
@@ -159,6 +159,19 @@ if $TERM !=? 'linux'
         set fillchars=vert:┃ showbreak=↪
     endif
 endif
+
+" toggle transparency "
+let t:is_transparent = 0
+function! Toggle_transparent()
+    if t:is_transparent == 0
+        hi Normal guibg=NONE ctermbg=NONE
+        let t:is_transparent = 1
+    else
+        set background=dark
+        let t:is_tranparent = 0
+    endif
+endfunction
+nnoremap <C-t> : call Toggle_transparent()<CR>
 
 " change cursor shape for different editing modes, neovim does this by default
 if !has('nvim')
