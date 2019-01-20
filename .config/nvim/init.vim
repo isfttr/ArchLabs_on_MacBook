@@ -24,11 +24,11 @@ Plug 'easymotion/vim-easymotion'
 
 " Deoplete and snippets
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
 " Syntax support
@@ -99,7 +99,7 @@ set shiftwidth=4       " amount of spaces for indentation
 set shortmess+=aAcIws  " Hide or shorten certain messages
 set number relativenumber
 
-set tw=60
+set tw=72
 set fo=cqt
 
 set ignorecase
@@ -299,68 +299,68 @@ endif
 
 " strip trailing whitespace, ss (strip space)
 nnoremap <silent> <Leader>ss
-    \ :let b:_p = getpos(".") <Bar>
-    \  let b:_s = (@/ != '') ? @/ : '' <Bar>
-    \  %s/\s\+$//e <Bar>
-    \  let @/ = b:_s <Bar>
-    \  nohlsearch <Bar>
-    \  unlet b:_s <Bar>
-    \  call setpos('.', b:_p) <Bar>
-    \  unlet b:_p <CR>
+            \ :let b:_p = getpos(".") <Bar>
+            \  let b:_s = (@/ != '') ? @/ : '' <Bar>
+            \  %s/\s\+$//e <Bar>
+            \  let @/ = b:_s <Bar>
+            \  nohlsearch <Bar>
+            \  unlet b:_s <Bar>
+            \  call setpos('.', b:_p) <Bar>
+            \  unlet b:_p <CR>
 
 " global replace
 vnoremap <Leader>sw "hy
-    \ :let b:sub = input('global replacement: ') <Bar>
-    \ if b:sub !=? '' <Bar>
-    \   let b:rep = substitute(getreg('h'), '/', '\\/', 'g') <Bar>
-    \   execute '%s/'.b:rep."/".b:sub.'/g' <Bar>
-    \   unlet b:sub b:rep <Bar>
-    \ endif <CR>
+            \ :let b:sub = input('global replacement: ') <Bar>
+            \ if b:sub !=? '' <Bar>
+            \   let b:rep = substitute(getreg('h'), '/', '\\/', 'g') <Bar>
+            \   execute '%s/'.b:rep."/".b:sub.'/g' <Bar>
+            \   unlet b:sub b:rep <Bar>
+            \ endif <CR>
 nnoremap <Leader>sw
-    \ :let b:sub = input('global replacement: ') <Bar>
-    \ if b:sub !=? '' <Bar>
-    \   execute "%s/<C-r><C-w>/".b:sub.'/g' <Bar>
-    \   unlet b:sub <Bar>
-    \ endif <CR>
+            \ :let b:sub = input('global replacement: ') <Bar>
+            \ if b:sub !=? '' <Bar>
+            \   execute "%s/<C-r><C-w>/".b:sub.'/g' <Bar>
+            \   unlet b:sub <Bar>
+            \ endif <CR>
 
 " prompt before each replace
 vnoremap <Leader>cw "hy
-    \ :let b:sub = input('interactive replacement: ') <Bar>
-    \ if b:sub !=? '' <Bar>
-    \   let b:rep = substitute(getreg('h'), '/', '\\/', 'g') <Bar>
-    \   execute '%s/'.b:rep.'/'.b:sub.'/gc' <Bar>
-    \   unlet b:sub b:rep <Bar>
-    \ endif <CR>
+            \ :let b:sub = input('interactive replacement: ') <Bar>
+            \ if b:sub !=? '' <Bar>
+            \   let b:rep = substitute(getreg('h'), '/', '\\/', 'g') <Bar>
+            \   execute '%s/'.b:rep.'/'.b:sub.'/gc' <Bar>
+            \   unlet b:sub b:rep <Bar>
+            \ endif <CR>
 
 nnoremap <Leader>cw
-    \ :let b:sub = input('interactive replacement: ') <Bar>
-    \ if b:sub !=? '' <Bar>
-    \   execute "%s/<C-r><C-w>/".b:sub.'/gc' <Bar>
-    \   unlet b:sub <Bar>
-    \ endif <CR>
+            \ :let b:sub = input('interactive replacement: ') <Bar>
+            \ if b:sub !=? '' <Bar>
+            \   execute "%s/<C-r><C-w>/".b:sub.'/gc' <Bar>
+            \   unlet b:sub <Bar>
+            \ endif <CR>
 
 " highlight long lines, ll (long lines)
 let w:longlines = matchadd('ColorColumn', '\%'.&textwidth.'v', &textwidth)
 nnoremap <silent> <Leader>ll
-    \ :if exists('w:longlines') <Bar>
-    \   silent! call matchdelete(w:longlines) <Bar>
-    \   echo 'Long line highlighting disabled'
-    \   <Bar> unlet w:longlines <Bar>
-    \ elseif &textwidth > 0 <Bar>
-    \   let w:longlines = matchadd('ColorColumn', '\%'.&textwidth.'v', &textwidth) <Bar>
-    \   echo 'Long line highlighting enabled'
-    \ <Bar> else <Bar>
-    \   let w:longlines = matchadd('ColorColumn', '\%80v', 81) <Bar>
-    \   echo 'Long line highlighting enabled'
-    \ <Bar> endif <CR>
+            \ :if exists('w:longlines') <Bar>
+            \   silent! call matchdelete(w:longlines) <Bar>
+            \   echo 'Long line highlighting disabled'
+            \   <Bar> unlet w:longlines <Bar>
+            \ elseif &textwidth > 0 <Bar>
+            \   let w:longlines = matchadd('ColorColumn', '\%'.&textwidth.'v', &textwidth) <Bar>
+            \   echo 'Long line highlighting enabled'
+            \ <Bar> else <Bar>
+            \   let w:longlines = matchadd('ColorColumn', '\%80v', 81) <Bar>
+            \   echo 'Long line highlighting enabled'
+            \ <Bar> endif <CR>
 
 " local keyword jump
 nnoremap <Leader>fw
-    \ [I:let b:jump = input('Go To: ') <Bar>
-    \ if b:jump !=? '' <Bar>
-    \   execute "normal! ".b:jump."[\t" <Bar>
-    \   unlet b:jump <Bar>
-    \ endif <CR>
+            \ [I:let b:jump = input('Go To: ') <Bar>
+            \ if b:jump !=? '' <Bar>
+            \   execute "normal! ".b:jump."[\t" <Bar>
+            \   unlet b:jump <Bar>
+            \ endif <CR>
 
 
 " quit the current buffer and switch to the next

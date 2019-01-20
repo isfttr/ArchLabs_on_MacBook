@@ -79,10 +79,7 @@ alias i3l='rofi_run -l'
 alias ydl='youtube-dl -i'
 alias f='uskb && vifm'
 
-# copying in NNN
-# alias ncp='cat ~/.nnncp > .last_copied_file'
-
-# changin keyboard layout - usekeybinding later
+# changing keyboard layout - usekeybinding later
 alias uskb='setxkbmap -layout us -variant mac'
 alias inkb='setxkbmap -layout us -variant intl'
 
@@ -91,7 +88,9 @@ alias music='cd && cd ~/OneDrive/Music/ && vifm'
 alias down='cd && cd ~/Downloads/ && vifm'
 alias oned='cd && cd ~/OneDrive/Workspace/ && onedrive --synchronize'
 alias mestrado='cd && ~/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/'
+alias apres='cd && ~/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/Apresentacao_qualif/'
 alias brain='cd && cd ~/OneDrive/Workspace/Brain_Dump/braindump/'
+
 ## access config files
 alias i3conf='cd && cd ~/.config/i3 && nvim config'
 alias qtconf='cd && cd ~/.config/qutebrowser && nvim config.py'
@@ -104,7 +103,8 @@ alias newsconf='cd && cd ~/.newsboat && nvim urls'
 alias fehbg='feh --bg-scale'
 alias weather='curl wttr.in' # requires curl
 alias fire='aafire -driver curses -dim' # requires aalib
-
+alias sx='sxiv -f *.jpg *.png *.gif'
+alias mutt='neomutt'
 ## faster encryption
 alias encrypt='openssl aes-256-cbc -a -pbkdf2' #-a show as text
 alias decrypt='openssl aes-256-cbc -d -a -pbkdf2' 
