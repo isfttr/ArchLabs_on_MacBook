@@ -162,6 +162,7 @@ bindsym $Mod+w          exec qutebrowser
 bindsym $Mod+t          exec st
 bindsym $Mod+Return     exec st
 #bindsym Control+Shift+t exec --no-startup-id exo-open --launch TerminalEmulator
+bindsym $Mod+e          exec emacs
 
 # logout script
 bindsym $Mod+x exec --no-startup-id rofi_run -l
