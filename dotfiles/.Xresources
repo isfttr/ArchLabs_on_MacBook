@@ -1,62 +1,22 @@
-! ! Solarized backup
-! ! special
-! *.foreground:   #93a1a1
-! *.background-even:   #32555e
-! *.background:   #002b36
-! *.background-dark:   #001920
-! *.cursorColor:  #93a1a1
-! 
-! ! black
-! *.color0:       #002b36
-! *.color8:       #657b83
-! 
-! ! red
-! *.color1:       #dc322f
-! *.color9:       #dc322f
-! 
-! ! green
-! *.color2:       #6a7a00
-! *.color10:      #6a7a00
-! 
-! ! yellow
-! *.color3:       #b58900
-! *.color11:      #b58900
-! 
-! ! blue
-! *.color4:       #268bd2
-! *.color12:      #268bd2
-! 
-! ! magenta
-! *.color5:       #6c71c4
-! *.color13:      #6c71c4
-! 
-! ! cyan
-! *.color6:       #2aa198
-! *.color14:      #2aa198
-! 
-! ! white
-! *.color7:       #93a1a1
-! *.color15:      #fdf6e3
+! Base16 Dracula
+! Scheme: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 
-! gruvbox dark medium
-!
-
-#define base00 #282828
-#define base01 #3c3836
-#define base02 #504945
-#define base03 #665c54
-#define base04 #bdae93
-#define base05 #d5c4a1
-#define base06 #ebdbb2
-#define base07 #fbf1c7
-#define base08 #fb4934
-#define base09 #fe8019
-#define base0A #fabd2f
-#define base0B #b8bb26
-#define base0C #8ec07c
-#define base0D #83a598
-#define base0E #d3869b
-#define base0F #d65d0e
+#define base00 #282936
+#define base01 #3a3c4e
+#define base02 #4d4f68
+#define base03 #626483
+#define base04 #62d6e8
+#define base05 #e9e9f4
+#define base06 #f1f2f8
+#define base07 #f7f7fb
+#define base08 #ea51b2
+#define base09 #b45bcf
+#define base0A #00f769
+#define base0B #ebff87
+#define base0C #a1efe4
+#define base0D #62d6e8
+#define base0E #b45bcf
+#define base0F #00f769
 
 *foreground:   base05
 #ifdef background_opacity
@@ -76,12 +36,12 @@
 *color7:       base05
 
 *color8:       base03
-*color9:       base08
-*color10:      base0B
-*color11:      base0A
-*color12:      base0D
-*color13:      base0E
-*color14:      base0C
+*color9:       base09
+*color10:      base01
+*color11:      base02
+*color12:      base04
+*color13:      base06
+*color14:      base0F
 *color15:      base07
 
 ! Rofi
@@ -93,13 +53,13 @@ rofi.hide-scrollbar: true
 rofi.separator-style: solid
 rofi.kb-cancel: Escape,Alt+F1
 
-! Rofi colors
 ! Property Name     BG       Border   Separator
-rofi.color-window:  #3c3836, #3c3836, #282828
+rofi.color-window:  #3a3c4e, #3a3c4e, #282936
+
 ! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
-rofi.color-normal:  #3c3836, #d5c4a1, #3c3836, #3c3836, #fbf1c7
-rofi.color-active:  #3c3836, #83a598, #3c3836, #3c3836, #83a598
-rofi.color-urgent:  #3c3836, #fb4934, #3c3836, #3c3836, #fb4934
+rofi.color-normal:  #3a3c4e, #e9e9f4, #3a3c4e, #3a3c4e, #f7f7fb
+rofi.color-active:  #3a3c4e, #62d6e8, #3a3c4e, #3a3c4e, #62d6e8
+rofi.color-urgent:  #3a3c4e, #ea51b2, #3a3c4e, #3a3c4e, #ea51b2
 
 ! xterm
 xterm*termName: xterm-256color
@@ -156,4 +116,3 @@ UXTerm*rightScrollBar: false
 UXTerm*jumpScroll: true
 UXTerm*multiScroll: true
 UXTerm*toolBar: false
-

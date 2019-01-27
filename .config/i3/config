@@ -22,31 +22,32 @@
 
 # NEW COLOR CONFIG --------
 
-## Base16 Gruvbox dark, medium
-# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+## Base16 Dracula
+# Author: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #282828
-set $base01 #3c3836
-set $base02 #504945
-set $base03 #665c54
-set $base04 #bdae93
-set $base05 #d5c4a1
-set $base06 #ebdbb2
-set $base07 #fbf1c7
-set $base08 #fb4934
-set $base09 #fe8019
-set $base0A #fabd2f
-set $base0B #b8bb26
-set $base0C #8ec07c
-set $base0D #83a598
-set $base0E #d3869b
-set $base0F #d65d0e
+set $base00 #282936
+set $base01 #3a3c4e
+set $base02 #626483
+set $base03 #4d4f68
+set $base04 #62d6e8
+set $base05 #e9e9f4
+set $base06 #f1f2f8
+set $base07 #f7f7fb
+set $base08 #ea51b2
+set $base09 #b45bcf
+set $base0A #ebff87
+set $base0B #00f769
+set $base0C #a1efe4
+set $base0D #62d6e8
+set $base0E #b45bcf
+set $base0F #00f769
 
-#Basic bar configuration using the Base16 variables.
+# Basic bar configuration using the Base16 variables.
 bar {
     status_command i3status
+
     mode hide
     hidden_state hide
     modifier Mod1
@@ -55,7 +56,7 @@ bar {
     colors {
         background $base00
         separator  $base01
-        statusline $base05
+        statusline $base04
 
         # State             Border  BG      Text
         focused_workspace   $base05 $base0D $base00
@@ -75,8 +76,6 @@ client.urgent           $base08 $base08 $base00 $base08 $base08
 client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
 
-
-#
 #--------------- REST OF CONFIGS ----------------
 #
 #border & title.. Must be set to border pixel for gaps to work
@@ -269,6 +268,25 @@ floating_modifier  Mod1
 #bindsym $Mod+Shift+z move scratchpad
 #bindsym $Mod+z scratchpad show
 
+## calculator window
+#for_window [instance="calculator"] floating enable
+#for_window [instance="calculator"] resize set 625 500
+#for_window [instance="calculator"] move scratchpad
+#for_window [instance="calculator"] border pixel 5
+#exec --no-startup-id $term -n calculator -f monospace:pixelsize=20 -e R -q
+#bindsym $Mod+c  [instance="calculator"] scratchpad show; [instance="calculator"] move position center
+#
+## make tmux restore sessions automatically
+##exec --no-startup -$term -n tmux -e tmux
+#
+## ncmpcpp window (only works after restoring tmux sessions by C-a C-r)
+#for_window [instance="ncmpcpp"] floating enable
+#for_window [instance="ncmpcpp"] resize set 625 500
+#for_window [instance="ncmpcpp"] move scratchpad
+#for_window [instance="ncmpcpp"] border pixel 2
+#exec --no-startup-id $term -n ncmpcpp -e tmux attach -t ncmpcpp
+#bindsym $Mod+Shift+c  [instance="ncmpcpp"] scratchpad show; [instance="ncmpcpp"] move position center
+
 # change focus
 bindsym $Mod+$left  focus left
 bindsym $Mod+$down  focus down
@@ -281,8 +299,8 @@ bindsym $Mod+Down  focus down
 bindsym $Mod+Up    focus up
 bindsym $Mod+Right focus right
 
-bindsym $Mod+p focus parent
-bindsym $Mod+c focus child
+#bindsym $Mod+p focus parent
+#bindsym $Mod+c focus child
 
 # move focused window
 bindsym $Mod+Shift+$left  move left  10px

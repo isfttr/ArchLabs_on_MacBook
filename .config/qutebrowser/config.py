@@ -71,7 +71,7 @@ c.fonts.debug_console = '9pt monospace'
 
 # Font used for the downloadbar.
 # Type: Font
-c.fonts.downloads = '3pt monospace'
+c.fonts.downloads = '7pt monospace'
 
 # Font used for the hints.
 # Type: Font
@@ -105,26 +105,36 @@ c.fonts.statusbar = '9pt monospace'
 # Type: QtFont
 c.fonts.tabs = '9pt monospace'
 
+# reminiscent from wolfgangs install
+def read_xresources(prefix):
+    props = {}
+    x = subprocess.run(['xrdb', '-query'], stdout=subprocess.PIPE)
+    lines = x.stdout.decode().split('\n')
+    for line in filter(lambda l : l.startswith(prefix), lines):
+        prop, _, value = line.partition(':\t')
+        props[prop] = value
+    return props
+
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova
-# Gruvbox dark, medium scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+# Dracula scheme by Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 
-base00 = "#282828"
-base01 = "#3c3836"
-base02 = "#504945"
-base03 = "#665c54"
-base04 = "#bdae93"
-base05 = "#d5c4a1"
-base06 = "#ebdbb2"
-base07 = "#fbf1c7"
-base08 = "#fb4934"
-base09 = "#fe8019"
-base0A = "#fabd2f"
-base0B = "#b8bb26"
-base0C = "#8ec07c"
-base0D = "#83a598"
-base0E = "#d3869b"
-base0F = "#d65d0e"
+base00 = "#282936"
+base01 = "#3a3c4e"
+base02 = "#626483"
+base03 = "#4d4f68"
+base04 = "#62d6e8"
+base05 = "#e9e9f4"
+base06 = "#f1f2f8"
+base07 = "#f7f7fb"
+base08 = "#ea51b2"
+base09 = "#b45bcf"
+base0A = "#ebff87"
+base0B = "#00f769"
+base0C = "#a1efe4"
+base0D = "#62d6e8"
+base0E = "#b45bcf"
+base0F = "#00f769"
 
 # set qutebrowser colors
 
@@ -357,13 +367,3 @@ c.colors.tabs.selected.even.bg = base05
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # c.colors.webpage.bg = base00
-
-# reminiscent from wolfgangs install
-def read_xresources(prefix):
-    props = {}
-    x = subprocess.run(['xrdb', '-query'], stdout=subprocess.PIPE)
-    lines = x.stdout.decode().split('\n')
-    for line in filter(lambda l : l.startswith(prefix), lines):
-        prop, _, value = line.partition(':\t')
-        props[prop] = value
-    return props

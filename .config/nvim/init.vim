@@ -21,7 +21,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'easymotion/vim-easymotion'
-Plug 'morhetz/gruvbox'
+""Plug 'morhetz/gruvbox'
 
 " Deoplete and snippets
 if has('nvim')
@@ -141,12 +141,12 @@ set list listchars=tab:>>,trail:~
 let g:gruvbox_italic=1
 
 try
-    colorscheme gruvbox
+    colorscheme dracula
 catch
     colorscheme jinx
 endtry
 
-""let g:airline_theme='jellybeans'
+let g:airline_theme='dracula'
 
 if $TERM !=? 'linux'
     set termguicolors
