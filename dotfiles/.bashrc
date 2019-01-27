@@ -112,3 +112,6 @@ alias decrypt='openssl aes-256-cbc -d -a -pbkdf2'
 ## markdown-pp/pandoc shortcuts
 alias brainmdpp='markdown-pp braindump_index.mdpp -o braindump_index.md && pandoc -o braindump_index.html braindump_index.md'
 alias wikimdpp='markdown-pp wiki_index.mdpp -o wiki_index.md && pandoc -o wiki_index.html wiki_index.md'
+
+## scripts
+alias pacui='bash ~/pacui'
