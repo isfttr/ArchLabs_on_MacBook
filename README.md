@@ -57,8 +57,8 @@ for your convenience.
 
 ## Coming soon
 
-- [ ] music setup with ncmpcpp 
-- [ ] mutt
+- [x] mutt
+- [x] music setup with ncmpcpp 
 - [x] list of features
 - [x] newsboat setup 
 - [x] further information links
