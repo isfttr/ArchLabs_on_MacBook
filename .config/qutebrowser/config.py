@@ -50,7 +50,12 @@ c.tabs.indicator.width = 0
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&ia=web'}
+#c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&ia=web'}
+c.url.searchengines = {'DEFAULT': 'https://searx.me/?q={}&ia=web'}
+
+# Page(s) to open at the start.
+# Type: List of FuzzyUrl, or FuzzyUrl
+#c.url.start_pages = 'file:///home/notthebee/.startpage/index.html'
 
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.

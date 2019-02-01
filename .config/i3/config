@@ -82,7 +82,10 @@ client.background       $base07
 for_window [class="^.*"] border pixel 2, title_format "<b> %class >> %title </b>"
 
 # gaps
-gaps inner 15
+#gaps inner 15
+#gaps outer 5
+
+gaps inner 0
 gaps outer 5
 
 # font
@@ -158,13 +161,16 @@ bindsym Control+space exec --no-startup-id rofi_run -r
 bindsym $Mod+w          exec qutebrowser
 #bindsym $Mod+f          exec --no-startup-id exo-open --launch FileManager
 #bindsym $Mod+f          exec vifm.desktop
-bindsym $Mod+t          exec st
+#bindsym $Mod+t          exec st
 bindsym $Mod+Return     exec st
 #bindsym Control+Shift+t exec --no-startup-id exo-open --launch TerminalEmulator
 bindsym $Mod+e          exec emacs
 
 # logout script
 bindsym $Mod+x exec --no-startup-id rofi_run -l
+
+# run rofi
+bindsym $mod+d exec --no-startup-id "rofi -show drun -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
 
 # Screenshot
 #bindsym Print exec --no-startup-id "scrot '%S.png' -e 'mv $f $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png ; feh $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png'"
@@ -339,7 +345,7 @@ focus_on_window_activation   focus
 # container layout
 bindsym $Mod+h split h
 bindsym $Mod+v split v
-bindsym $Mod+Shift+t layout tabbed
+bindsym $Mod+t layout tabbed
 bindsym $Mod+Shift+s layout stacking
 bindsym $Mod+Shift+h layout toggle split
 
@@ -347,22 +353,17 @@ bindsym $Mod+shift+f fullscreen toggle
 
 default_orientation horizontal
 
-## add binding mode for opening files here
-## open github folder
-#bindsym $Mod+g exec cd ~/GitHub
-#
-## Binding mode for changing keymaps
-## this is useless btw
-#set $mode_keymaps Keymaps: M- [u] us [i] intl
-#bindsym $Mod+e mode "$mode_keymaps"
-#
-#mode "$mode_keymaps" {
-#
-#bindysim Mod1+Up exec setxkbmap -layout us -variant mac
-#bindysim Mod1+Down exec setxkbmap -layout us -variant intl
-#
-#bindsym Escape mode "default"
-#}
+# Binding mode for changing keymaps
+set $mode_keymaps Keymaps: M- [up] us [dn] intl
+bindsym $Mod+s mode "$mode_keymaps"
+
+mode "$mode_keymaps" {
+
+bindsym Mod1+Up exec setxkbmap -layout us -variant mac && notify-send "keymap us"
+bindsym Mod1+Down exec setxkbmap -layout us -variant intl && notify-send "keymap intl"
+
+bindsym Escape mode "default"
+}
 ######################################################
 ###############      Border & Gaps     ###############
 ######################################################
