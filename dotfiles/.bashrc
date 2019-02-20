@@ -74,6 +74,7 @@ export TERM=st-256color
 alias sb='cd && source .bashrc'
 alias vb='cd && nvim .bashrc'
 alias i3l='rofi_run -l'
+alias rm='rm -rf'
 
 ## for applications
 alias ydl='youtube-dl -i'
