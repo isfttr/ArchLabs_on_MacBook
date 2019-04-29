@@ -50,8 +50,8 @@ c.tabs.indicator.width = 0
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
 # Type: Dict
-#c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&ia=web'}
-c.url.searchengines = {'DEFAULT': 'https://searx.me/?q={}&ia=web'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&ia=web'}
+#c.url.searchengines = {'DEFAULT': 'https://searx.me/?q={}&ia=web'}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl

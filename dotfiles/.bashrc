@@ -76,6 +76,9 @@ alias vb='cd && nvim .bashrc'
 alias i3l='rofi_run -l'
 alias rm='rm -rf'
 
+# Pacman
+alias pacmirror='sudo pacman -Syuw'
+
 ## for applications
 alias ydl='youtube-dl -i'
 alias f='uskb && vifm'
