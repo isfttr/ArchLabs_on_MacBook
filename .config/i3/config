@@ -1,5 +1,16 @@
 # # ArchLabs i3 config
-# 
+#
+#    o8o    .oooo.        88                                  .o88o.  o8o
+#    `"'  .dP""Y88b      .8'                                  888 `"  `"'
+#   oooo        ]8P'    .8'   .ooooo.   .ooooo.  ooo. .oo.   o888oo  oooo   .oooooooo
+#   `888      <88b.    .8'   d88' `"Y8 d88' `88b `888P"Y88b   888    `888  888' `88b
+#    888       `88b.  .8'    888       888   888  888   888   888     888  888   888
+#    888  o.   .88P  .8'     888   .o8 888   888  888   888   888     888  `88bod8P'
+#   o888o `8bd88P'   88      `Y8bod8P' `Y8bod8P' o888o o888o o888o   o888o `8oooooo.
+#                                                                          d"     YD
+#                                                                          "Y88888P'
+#
+
 # # Xresources      var      value       fallback
 # set_from_resource $bg      background  #19043C
 # set_from_resource $fg      foreground  #F1F1F1
