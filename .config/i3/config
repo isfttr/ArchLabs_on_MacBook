@@ -110,14 +110,14 @@ set $right semicolon
 # set $WS7 "7: 🖎 "
 # set $WS8 "8: 🕱 "
 
- set $WS1 "1:"
- set $WS2 "2:"
- set $WS3 "3:"
- set $WS4 "4:"
- set $WS5 "5:"
- set $WS6 "6:"
- set $WS7 "7:"
- set $WS8 "8:"
+ set $WS1 "emacs"
+ set $WS2 "mail"
+ set $WS3 "web"
+ set $WS4 "term"
+ set $WS5 "5"
+ set $WS6 "6"
+ set $WS7 "7"
+ set $WS8 "8"
 #
 # monitors
 set $Mon1 HDMI1
@@ -416,9 +416,10 @@ for_window [class="(?i)(?:emacs|qutebrowser)"]  focus
 
 # Assign Applications to specific workspace
 # get class with xprop
-assign [class="(?i)(?:qutebrowser)"] → $WS2
-assign [class="(?i)(?:emacs)"]   → $WS3
-assign [class="(?i)(?:inkscape)"]  → $WS4
+assign [class="(?i)(?:emacs)"]   → $WS1
+assign [class="(?i)(?:mailspring)"] → $WS2
+assign [class="(?i)(?:qutebrowser)"] → $WS3
+assign [class="(?i)(?:inkscape)"]  → $WS5
 
 # focus, floating, & sticky
 for_window [title="(?i)(?:copying|deleting|moving)"] floating enable
