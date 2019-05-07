@@ -130,7 +130,7 @@ set $Mon2 HDMI2
 # run with reload
 #exec_always --no-startup-id al-polybar-session
 #exec_always --no-startup-id nitrogen --restore
-exec_always --no-startup-id xrdb -load ~/.Xresources
+exec_always --no-startup-id xrdb -load ~/repositories/ArchLabs_on_MacBook/dotfiles/.Xresources
 exec_always --no-startup-id ~/.fehbg &
 
 # If you have a numpad you may want to enable this
