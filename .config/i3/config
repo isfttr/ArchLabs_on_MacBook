@@ -22,27 +22,27 @@
 
 # NEW COLOR CONFIG --------
 
-## Base16 Dracula
-# Author: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+## Base16 Nord
+# Author: arcticicestudio
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #282936
-set $base01 #3a3c4e
-set $base02 #626483
-set $base03 #4d4f68
-set $base04 #62d6e8
-set $base05 #e9e9f4
-set $base06 #f1f2f8
-set $base07 #f7f7fb
-set $base08 #ea51b2
-set $base09 #b45bcf
-set $base0A #ebff87
-set $base0B #00f769
-set $base0C #a1efe4
-set $base0D #62d6e8
-set $base0E #b45bcf
-set $base0F #00f769
+set $base00 #2E3440
+set $base01 #3B4252
+set $base02 #434C5E
+set $base03 #4C566A
+set $base04 #D8DEE9
+set $base05 #E5E9F0
+set $base06 #ECEFF4
+set $base07 #8FBCBB
+set $base08 #88C0D0
+set $base09 #81A1C1
+set $base0A #5E81AC
+set $base0B #BF616A
+set $base0C #D08770
+set $base0D #EBCB8B
+set $base0E #A3BE8C
+set $base0F #B48EAD
 
 # Basic bar configuration using the Base16 variables.
 bar {
@@ -256,7 +256,7 @@ bindsym $Mod+Shift+Mod2+KP_Up move container to workspace $WS8; workspace $WS8
 ############################################################
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $Mod+Shift+r restart
+#bindsym $Mod+Shift+r restart
 
 # reload the configuration file
 bindsym $Mod+Shift+c reload

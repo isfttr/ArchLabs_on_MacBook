@@ -1,4 +1,5 @@
-#include ".Xresources.th/.Xdracula"
+#include ".Xresources.th/.Xnord"
+!
 ! xterm
 xterm*termName: xterm-256color
 xterm*font: monospace
@@ -9,9 +10,10 @@ xterm*saveLines: 2000
 xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 xterm*eightBitInput: false
 
+!
 ! URxvt
 URxvt*saveline: 15000
-URxvt*termName: rxvt-256color
+URxvt*termName: urxvt-256color
 URxvt*iso14755: false
 URxvt*depth: 32
 URxvt*background: [95]#002b36

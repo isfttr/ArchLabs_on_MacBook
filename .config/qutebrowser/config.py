@@ -122,24 +122,24 @@ def read_xresources(prefix):
 
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova
-# Dracula scheme by Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+# Nord scheme by arcticicestudio
 
-base00 = "#282936"
-base01 = "#3a3c4e"
-base02 = "#626483"
-base03 = "#4d4f68"
-base04 = "#62d6e8"
-base05 = "#e9e9f4"
-base06 = "#f1f2f8"
-base07 = "#f7f7fb"
-base08 = "#ea51b2"
-base09 = "#b45bcf"
-base0A = "#ebff87"
-base0B = "#00f769"
-base0C = "#a1efe4"
-base0D = "#62d6e8"
-base0E = "#b45bcf"
-base0F = "#00f769"
+base00 = "#2E3440"
+base01 = "#3B4252"
+base02 = "#434C5E"
+base03 = "#4C566A"
+base04 = "#D8DEE9"
+base05 = "#E5E9F0"
+base06 = "#ECEFF4"
+base07 = "#8FBCBB"
+base08 = "#88C0D0"
+base09 = "#81A1C1"
+base0A = "#5E81AC"
+base0B = "#BF616A"
+base0C = "#D08770"
+base0D = "#EBCB8B"
+base0E = "#A3BE8C"
+base0F = "#B48EAD"
 
 # set qutebrowser colors
 
@@ -209,7 +209,7 @@ c.colors.hints.fg = base00
 
 # Background color for hints. Note that you can use a `rgba(...)` value
 # for transparency.
-c.colors.hints.bg = base0A
+c.colors.hints.bg = base0D
 
 # Font color for the matched part of hints.
 c.colors.hints.match.fg = base05
@@ -371,4 +371,4 @@ c.colors.tabs.selected.even.bg = base05
 
 # Background color for webpages if unset (or empty to use the theme's
 # color).
-c.colors.webpage.bg = base00
+# c.colors.webpage.bg = base00

@@ -141,12 +141,12 @@ set list listchars=tab:>>,trail:~
 let g:gruvbox_italic=1
 
 try
-    colorscheme dracula
+    colorscheme nord
 catch
     colorscheme jinx
 endtry
 
-let g:airline_theme='dracula'
+let g:airline_theme='base16_nord'
 
 if $TERM !=? 'linux'
     set termguicolors
