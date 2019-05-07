@@ -35,8 +35,9 @@ update this setup until everything is working.
 
 ### Screenshots of the current setup
 
-![ArchLabs_on_MacBook](ArchLabs_on_MacBook.png) ![Vifm and
-Neovim](vifm_ArchLabs_on_MacBook.png)
+![ArchLabs_on_MacBook Nord theme](nord-archlabs-macbook.png) 
+![Vifm Nord theme](vifm-nord-archlabs.png)
+![Gotop Nord theme](gotop-nord-archlabs.png)
 
 ## List of features
 
@@ -45,9 +46,8 @@ Neovim](vifm_ArchLabs_on_MacBook.png)
 - **Hardware that is working but not ideally**: the battery
     is having a higher consumption.
 - **Software installed**: st, vifm, rofi, dunst, neovim
-    (using vim-plug with no issues), mpv, flameshot,
-    calcurse, newsboat, rtv.
-- **User interface**: i3 gaps w/ gruvbox theme.
+    (using vim-plug with no issues), emacs (doom-emacs), mpv, flameshot, newsboat
+- **User interface**: i3 gaps w/ nord theme.
 
 ## Quick fixes and tips
 
