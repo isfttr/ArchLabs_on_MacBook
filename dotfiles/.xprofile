@@ -26,3 +26,6 @@ xset dpms 1200 1300 1400
 
 # keyboard repeat rate
 xset r rate 350 60
+
+# MPD daemon start (if no other user instance exists)
+[ ! -s ~/.config/mpd/pid ] && mpd

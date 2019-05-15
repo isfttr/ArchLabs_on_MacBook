@@ -100,7 +100,7 @@ gaps inner 0
 gaps outer 5
 
 # font
-font pango:monospace 11
+font pango:monospace 9
 
 # $Mod = Super or Alt?
 set $Mod Mod4

@@ -37,6 +37,8 @@ shopt -s cmdhist histappend histreedit histverify
 # prompt if file sourcing below fails
 PS1='[\u@\h \W]\$ '
 
+#---- new bash prompt
+
 # uncomment these lines to disable the multi-line prompt
 # add user@host, and remove the unicode line-wrap characters
 
@@ -82,18 +84,14 @@ alias pacmirror='sudo pacman -Syuw'
 ## for applications
 alias ydl='youtube-dl -i'
 alias f='uskb && vifm'
+alias l='clear'
 
 # changing keyboard layout - usekeybinding later
 alias uskb='setxkbmap -layout us -variant mac'
 alias inkb='setxkbmap -layout us -variant intl'
 
 ## to directories
-alias music='cd && cd ~/OneDrive/Music/ && vifm'
 alias down='cd && cd ~/Downloads/ && vifm'
-alias oned='cd && cd ~/OneDrive/Workspace/ && onedrive --synchronize'
-alias mestrado='cd && ~/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/'
-alias apres='cd && ~/OneDrive/Workspace/II.Quimica/2.Mestrado/2.Pesquisa/Patentes_vs_Periódicos/Apresentacao_qualif/'
-alias brain='cd && cd ~/OneDrive/Workspace/Brain_Dump/braindump/'
 
 ## access config files
 alias i3conf='cd && cd ~/.config/i3 && nvim config'
@@ -109,13 +107,14 @@ alias weather='curl wttr.in' # requires curl
 alias fire='aafire -driver curses -dim' # requires aalib
 alias sx='sxiv -f *.jpg *.png *.gif'
 alias mutt='neomutt'
+
 ## faster encryption
 alias encrypt='openssl aes-256-cbc -a -pbkdf2' #-a show as text
 alias decrypt='openssl aes-256-cbc -d -a -pbkdf2' 
 
-## markdown-pp/pandoc shortcuts
-alias brainmdpp='markdown-pp braindump_index.mdpp -o braindump_index.md && pandoc -o braindump_index.html braindump_index.md'
-alias wikimdpp='markdown-pp wiki_index.mdpp -o wiki_index.md && pandoc -o wiki_index.html wiki_index.md'
-
 ## scripts
 alias pacui='bash ~/pacui'
+
+# -- more functions
+## auto cd into a directory
+shopt -s autocd
