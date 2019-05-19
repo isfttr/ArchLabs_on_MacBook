@@ -67,31 +67,30 @@ export EDITOR="$VISUAL"
 
 # expand aliases to non-interactive shells
 shopt -s expand_aliases
+## auto cd into a directory
+shopt -s autocd
 
 # setting term
 export TERM=st-256color
 
 # aliases below
 #alias vim='nvim'
-alias sb='cd && source .bashrc'
+alias sb='cd && source .bashrc && clear && ufetch'
 alias vb='cd && nvim .bashrc'
 alias i3l='rofi_run -l'
 alias rm='rm -rf'
 
 # Pacman
-alias pacmirror='sudo pacman -Syuw'
+alias mirror='sudo pacman -Syuw && clear && ufetch'
 
 ## for applications
 alias ydl='youtube-dl -i'
 alias f='uskb && vifm'
-alias l='clear'
+alias l='clear && ufetch'
 
 # changing keyboard layout - usekeybinding later
 alias uskb='setxkbmap -layout us -variant mac'
 alias inkb='setxkbmap -layout us -variant intl'
-
-## to directories
-alias down='cd && cd ~/Downloads/ && vifm'
 
 ## access config files
 alias i3conf='cd && cd ~/.config/i3 && nvim config'
@@ -112,9 +111,16 @@ alias mutt='neomutt'
 alias encrypt='openssl aes-256-cbc -a -pbkdf2' #-a show as text
 alias decrypt='openssl aes-256-cbc -d -a -pbkdf2' 
 
+## xrandr
+alias dell='xrandr --output HDMI1 --mode 1920x1080 --output LVDS1 --primary --scale 1.5x1.35'
+alias mac='xrandr --output LVDS1 --primary --scale 1x1'
+
+## wifi kernel module
+alias wifi='sudo modprobe -v b43'
+
 ## scripts
 alias pacui='bash ~/pacui'
 
+##ufetch
+alias ufetch='clear && ufetch'
 # -- more functions
-## auto cd into a directory
-shopt -s autocd
