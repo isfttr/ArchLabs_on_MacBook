@@ -79,6 +79,8 @@ alias sb='cd && source .bashrc && clear && ufetch'
 alias vb='cd && nvim .bashrc'
 alias i3l='rofi_run -l'
 alias rm='rm -rf'
+alias lsl='ls -ll'
+alias lsa='ls -al'
 
 # Pacman
 alias mirror='sudo pacman -Syuw && clear && ufetch'
@@ -112,8 +114,8 @@ alias encrypt='openssl aes-256-cbc -a -pbkdf2' #-a show as text
 alias decrypt='openssl aes-256-cbc -d -a -pbkdf2' 
 
 ## xrandr
-alias dell='xrandr --output HDMI1 --mode 1920x1080 --output LVDS1 --primary --scale 1.5x1.35'
-alias mac='xrandr --output LVDS1 --primary --scale 1x1'
+alias dell='xrandr --output HDMI1 --mode 1920x1080 --output LVDS1 --primary --scale 1.5x1.35 && l'
+alias mac='xrandr --output LVDS1 --primary --scale 1x1 && l'
 
 ## wifi kernel module
 alias wifi='sudo modprobe -v b43'
