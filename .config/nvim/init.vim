@@ -537,6 +537,7 @@ let R_openpdf = 1
 
 nmap P :pu<CR>
 nmap W :wq<CR>
+nmap <Space>wq :wq<CR>
 nmap <Leader>w :w<CR>
 nmap <Space>fs :w<CR>
 nmap Q :q!<CR>
