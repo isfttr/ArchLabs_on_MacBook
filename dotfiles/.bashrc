@@ -65,11 +65,6 @@ export EDITOR="$VISUAL"
 # export NNN_COPIER="~/scripts/copier.sh"
 # export NNN_FALLBACK_OPENER=xdg-open
 
-# expand aliases to non-interactive shells
-shopt -s expand_aliases
-## auto cd into a directory
-shopt -s autocd
-
 # setting term
 export TERM=st-256color
 

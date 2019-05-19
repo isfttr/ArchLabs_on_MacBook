@@ -420,6 +420,7 @@ bindsym $Mod+Control+Shift+minus gaps outer all     minus 5
 # bindings for launching apps
 bindsym $Mod+e          exec emacs
 bindsym $Mod+z          exec "flameshot gui"
+bindsym $Mod1+t         exec telegram-desktop
 
 for_window [class="(?i)(?:qt5ct|pinentry)"] floating enable, focus
 for_window [class="(?i)(?:st)"] focus
