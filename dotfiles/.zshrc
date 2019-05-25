@@ -68,7 +68,7 @@ ZSH_CUSTOM=~/repositories/zsh-customizations
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf-git git-aliases)
+plugins=(git fzf-git git-aliases globalias)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -127,6 +127,8 @@ alias tags='git tag'
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias branches='git branch'
+
+alias -g gcl='git clone'
 
 alias gcn='git config user.name'
 alias gce='git config user.email'
