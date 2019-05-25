@@ -69,13 +69,24 @@ export EDITOR="$VISUAL"
 export TERM=st-256color
 
 # aliases below
-#alias vim='nvim'
+alias vim='nvim'
 alias sb='cd && source .bashrc && clear && ufetch'
 alias vb='cd && nvim .bashrc'
 alias i3l='rofi_run -l'
 alias rm='rm -rf'
 alias lsl='ls -ll'
 alias lsa='ls -al'
+alias mkcd='mkdir %a | cd %a'
+
+# git
+alias gg='git status'
+alias gc='git commit -m'
+alias gs='git stage'
+alias ga='git add .'
+alias gf='git fetch'
+alias gp='git pull'
+alias checkout='git checkout'
+alias gm='git merge'
 
 # Pacman
 alias mirror='sudo pacman -Syuw && clear && ufetch'
@@ -84,18 +95,19 @@ alias mirror='sudo pacman -Syuw && clear && ufetch'
 alias ydl='youtube-dl -i'
 alias f='uskb && vifm'
 alias l='clear && ufetch'
+alias dmenu_run="dmenu_run -nb '#2e3440' -sf '#2e3440' -nf '#bf616a' -sb '#bf616a'"
 
 # changing keyboard layout - usekeybinding later
 alias uskb='setxkbmap -layout us -variant mac'
 alias inkb='setxkbmap -layout us -variant intl'
 
 ## access config files
-alias i3conf='cd && cd ~/.config/i3 && nvim config'
-alias qtconf='cd && cd ~/.config/qutebrowser && nvim config.py'
-alias xresconf='cd && nvim .Xresources'
-alias vimconf='cd && cd ~/.config/nvim && nvim init.vim'
-alias vifmconf='cd && cd ~/.config/vifm && nvim vifmrc'
-alias newsconf='cd && cd ~/.newsboat && nvim urls'
+alias i3conf='nvim ~/.config/i3/config'
+alias qtconf='nvim ~/.config/qutebrowser/config.py'
+alias xresconf='nvim ~/.Xresources'
+alias vimconf='nvim ~/.config/nvim/init.vim'
+alias vifmconf='nvim ~/.config/vifm/vifmrc'
+alias newsconf='nvim ~/.newsboat/urls'
 
 ## recurrent use
 alias fehbg='feh --bg-scale'
@@ -109,8 +121,8 @@ alias encrypt='openssl aes-256-cbc -a -pbkdf2' #-a show as text
 alias decrypt='openssl aes-256-cbc -d -a -pbkdf2' 
 
 ## xrandr
-alias dell='xrandr --output HDMI1 --mode 1920x1080 --output LVDS1 --primary --scale 1.5x1.35 && l'
-alias mac='xrandr --output LVDS1 --primary --scale 1x1 && l'
+alias dell='xrandr --output HDMI1 --mode 1920x1080 --output LVDS1 --primary --scale 1.5x1.35 && ~/.fehbg && l'
+alias mac='xrandr --output LVDS1 --primary --scale 1x1 && ~/.fehbg && l'
 
 ## wifi kernel module
 alias wifi='sudo modprobe -v b43'
