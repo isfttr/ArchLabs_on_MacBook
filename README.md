@@ -35,9 +35,7 @@ update this setup until everything is working.
 
 ### Screenshots of the current setup
 
-![ArchLabs_on_MacBook Nord theme](nord-archlabs-macbook.png) 
-![Vifm Nord theme](vifm-nord-archlabs.png)
-![Gotop Nord theme](gotop-nord-archlabs.png)
+![ArchLabs_on_MacBook Nord theme with zshell](nord+zshell-desktop.png) 
 
 ## List of features
 
