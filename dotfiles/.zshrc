@@ -127,10 +127,11 @@ alias tags='git tag'
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias branches='git branch'
+
 alias gcn='git config user.name'
 alias gce='git config user.email'
 alias gcs='git config commit.gpgsign true'
-alias gsg='git config user.signingkey'
+alias gsk='git config user.signingkey'
 alias gitalias='cat ~/repositories/ArchLabs_on_MacBook/dotfiles/.zshrc | grep git'
 
 # gpg
