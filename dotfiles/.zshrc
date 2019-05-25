@@ -68,7 +68,7 @@ ZSH_CUSTOM=~/repositories/zsh-customizations
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf-git)
+plugins=(git fzf-git git-aliases)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,6 +111,7 @@ alias mkcd='mkdir %a | cd %a'
 # git
 alias gg='git status'
 alias gc='git commit -m'
+alias gcc='git commit -S -m'
 alias gs='git stage'
 alias gsa='git stage .'
 alias ga='git add'
@@ -123,9 +124,20 @@ alias gpu='git push -u origin master'
 alias gpd='git push -u origin develop'
 alias gt='git tag -a'
 alias tags='git tag'
-alias checkout='git checkout'
-alias clone='git clone'
-alias galias='cat ~/repositories/ArchLabs_on_MacBook/dotfiles/.zshrc | grep git'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias branches='git branch'
+alias gcn='git config user.name'
+alias gce='git config user.email'
+alias gcs='git config commit.gpgsign true'
+alias gsg='git config user.signingkey'
+alias gitalias='cat ~/repositories/ArchLabs_on_MacBook/dotfiles/.zshrc | grep git'
+
+# gpg
+alias gnk='gpg --full-generate-key'
+alias glg='gpg --list-secret-keys --keyid-format LONG'
+alias gae='gpg --armor --export' #prints gpg key id
+alias gpgalias='cat ~/repositories/ArchLabs_on_MacBook/dotfiles/.zshrc | grep gpg'
 
 # Pacman
 alias mirror='sudo pacman -Syuw && clear && ufetch'
