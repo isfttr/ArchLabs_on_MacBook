@@ -68,7 +68,7 @@ ZSH_CUSTOM=~/repositories/zsh-customizations
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git globalias)
+plugins=(git git-extras fzf globalias)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,18 +100,18 @@ source $ZSH/oh-my-zsh.sh
 
 #aliases below
 alias vim='nvim'
+alias v='nvim'
 alias sz='source ~/.zshrc && clear && ufetch'
 alias vz='nvim ~/.zshrc'
 alias i3l='rofi_run -l'
 alias rm='rm -rf'
 alias lsl='ls -ll'
 alias lsa='ls -al'
-alias mkcd='mkdir %a | cd %a'
 
 # git
 alias gg='git status'
-alias gc='git commit -m'
-alias gcc='git commit -S -m'
+alias gc='git commit -a'
+alias gcc='git commit -S -a'
 alias gs='git stage'
 alias gsa='git stage .'
 alias ga='git add'
@@ -164,6 +164,8 @@ alias vimconf='nvim ~/.config/nvim/init.vim'
 alias vifmconf='nvim ~/.config/vifm/vifmrc'
 alias newsconf='nvim ~/.newsboat/urls'
 
+## access other repositories
+
 ## recurrent use
 alias fehbg='feh --bg-scale'
 alias weather='curl wttr.in' # requires curl
@@ -187,4 +189,3 @@ alias pacui='bash ~/pacui'
 
 ##ufetch
 alias ufetch='clear && ufetch'
-# -- more functions
