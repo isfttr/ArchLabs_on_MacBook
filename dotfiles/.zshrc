@@ -110,8 +110,8 @@ alias lsa='ls -al'
 
 # git
 alias gg='git status'
-alias gc='git commit -a'
-alias gcc='git commit -S -a'
+alias gc='git commit -a -m'
+alias gcc='git commit -S -a -m'
 alias gs='git stage'
 alias gsa='git stage .'
 alias ga='git add'

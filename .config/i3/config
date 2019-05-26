@@ -174,8 +174,6 @@ bindsym $Mod+d exec dmenu_run -nb '#2e3440' -sf '#2e3440' -nf '#bf616a' -sb '#bf
 
 # kill focused window
 bindsym $Mod+Shift+q kill
-bindsym Mod1+q kill
-bindsym Mod1+F4 kill
 
 # launchers
 #bindsym Control+space exec --no-startup-id rofi_run -r
@@ -184,8 +182,6 @@ bindsym Mod1+F4 kill
 #bindsym $Mod+w          exec --no-startup-id exo-open --launch WebBrowser
 bindsym $Mod+w          exec qutebrowser
 #bindsym $Mod+f          exec --no-startup-id exo-open --launch FileManager
-#bindsym $Mod+f          exec vifm.desktop
-#bindsym $Mod+t          exec st
 bindsym $Mod+Return     exec st
 #bindsym Control+Shift+t exec --no-startup-id exo-open --launch TerminalEmulator
 
@@ -433,7 +429,7 @@ bindsym $Mod+Control+Shift+minus gaps outer all     minus 5
 # bindings for launching apps
 bindsym $Mod+e          exec emacs
 bindsym $Mod+z          exec "flameshot gui"
-bindsym $Mod1+t         exec telegram-desktop
+bindsym Mod1+t         exec telegram-desktop
 
 for_window [class="(?i)(?:qt5ct|pinentry)"] floating enable, focus
 for_window [class="(?i)(?:st)"] focus
@@ -455,6 +451,7 @@ popup_during_fullscreen smart
 exec --no-startup-id i3-msg workspace $WS1
 
 #dmenu scrips
-bindsym $Mod1+p exec --no-startup-id pacui
-bindsym $Mod1+k exec --no-startup-id "bash ~/killmenu"
-bindsym $Mod1+x exec --no-startup-id "bash ~/shutdowmenu"
+bindsym Mod1+p exec --no-startup-id "bash ~/pacui"
+bindsym Mod1+k exec --no-startup-id "bash ~/killmenu | dmenu"
+bindsym Mod1+x exec --no-startup-id "bash ~/shutdowmenu | dmenu"
+bindsym Ctrl+Shift+m exec --no-startup-id "bash ~/scripts/displayselect"
