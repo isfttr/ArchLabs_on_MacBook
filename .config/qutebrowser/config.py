@@ -14,6 +14,10 @@ config.bind("ch", "history-clear")
 config.bind("cs", "config-source")
 config.bind("pf", "fullscreen")
 config.bind("po", "edit-url")
+config.bind(",p", "hint links spawn --detach mpv --force-window yes {hint-url}")
+config.bind("wa", "open https://web.archive.org/web/{url}")
+config.bind(",w", "hint links fill :open -t https://web.archive.org/web/{hint-url}")
+config.bind("t", "open -t")
 
 # for userscprits
 config.bind("er", "spawn --userscript readability")
@@ -50,7 +54,19 @@ c.tabs.indicator.width = 0
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&ia=web'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&ia=web',
+                        'aur': 'https://wiki.archlinux.org/?search={}',
+                        'gh': 'https://github.com/search?q={}',
+                        'yt': 'https://youtube.com/results?search_query={}',
+                        'w': 'https://en.wikipedia.org/?search={}',
+                        'genlib': 'http://gen.lib.rus.ex/search.php?req={}',
+                        'rarbg': 'https://rarbgproxied.org/torrents.php?search={}',
+                        'sh': 'http://sci-hub.tw/{}',
+                        'scholar': 'https://scholar.google.com.br/scholar?hl=pt-BR&as_sdt=0%2C5&q={}&btnG=',
+                        'unsplash': 'https://unsplash.com/search/photos/{}',
+                        'reddit': 'https://www.reddit.com/search/?q={}',
+                        'unixporn': 'https://www.reddit.com/r/unixporn/search/?q={}&restrict_sr=1'
+                       }
 #c.url.searchengines = {'DEFAULT': 'https://searx.me/?q={}&ia=web'}
 
 # Page(s) to open at the start.
