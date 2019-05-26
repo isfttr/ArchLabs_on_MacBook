@@ -1,0 +1,11 @@
+#!/bin/sh
+
+choices="logout\nreboot\nshutdown"
+
+chosen=$(echo -e "$choices" | dmenu -i -p "Shutdown options:")
+
+case "$chosen" in
+    logout) logout ;;
+    reboot) shutdown -r now ;;
+    shutdown) shutdown -h now ;;
+esac

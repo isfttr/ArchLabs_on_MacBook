@@ -429,7 +429,7 @@ bindsym $Mod+Control+Shift+minus gaps outer all     minus 5
 # bindings for launching apps
 bindsym $Mod+e          exec emacs
 bindsym $Mod+z          exec "flameshot gui"
-bindsym Mod1+t         exec telegram-desktop
+bindsym Ctrl+t          exec telegram-desktop
 
 for_window [class="(?i)(?:qt5ct|pinentry)"] floating enable, focus
 for_window [class="(?i)(?:st)"] focus
@@ -451,7 +451,4 @@ popup_during_fullscreen smart
 exec --no-startup-id i3-msg workspace $WS1
 
 #dmenu scrips
-bindsym Mod1+p exec --no-startup-id "bash ~/pacui"
-bindsym Mod1+k exec --no-startup-id "bash ~/killmenu | dmenu"
-bindsym Mod1+x exec --no-startup-id "bash ~/shutdowmenu | dmenu"
 bindsym Ctrl+Shift+m exec --no-startup-id "bash ~/scripts/displayselect"

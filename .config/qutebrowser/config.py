@@ -57,6 +57,7 @@ c.tabs.indicator.width = 0
 c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&ia=web',
                         'aur': 'https://wiki.archlinux.org/?search={}',
                         'gh': 'https://github.com/search?q={}',
+                        'gl': 'https://gitlab.com/search?utf8=%E2%9C%93&snippets=&scope=&search={}',
                         'yt': 'https://youtube.com/results?search_query={}',
                         'w': 'https://en.wikipedia.org/?search={}',
                         'genlib': 'http://gen.lib.rus.ex/search.php?req={}',

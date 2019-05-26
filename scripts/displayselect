@@ -1,0 +1,11 @@
+#!/bin/sh
+
+choices="macbook\ndell"
+
+chosen=$(echo -e "$choices" | dmenu -i -p "Select display:")
+
+case "$chosen" in
+    macbook) xrandr --output LVDS1 --primary --scale 1x1 && ~/.fehbg && clear ;;
+    dell) xrandr --output HDMI1 --mode 1920x1080 --output LVDS1 --primary --scale 1.5x1.35 && ~/.fehbg && clear ;;
+    arandr) arandr ;;
+esac
