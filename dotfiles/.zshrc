@@ -147,6 +147,7 @@ alias mirror='sudo pacman -Syuw && clear && ufetch'
 
 ## for applications
 alias ydl='youtube-dl -i'
+alias ydlaudio='youtube-dl -i -f bestaudio'
 alias f='uskb && vifm'
 alias l='clear && ufetch'
 alias q='exit'
