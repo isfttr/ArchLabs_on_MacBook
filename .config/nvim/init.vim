@@ -21,7 +21,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'easymotion/vim-easymotion'
-""Plug 'morhetz/gruvbox'
+Plug 'dylanaraps/wal.vim'
 
 " Deoplete and snippets
 if has('nvim')
@@ -141,7 +141,7 @@ set list listchars=tab:>>,trail:~
 let g:gruvbox_italic=1
 
 try
-    colorscheme nord
+    colorscheme wal
 catch
     colorscheme jinx
 endtry

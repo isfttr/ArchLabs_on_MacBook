@@ -1,10 +1,10 @@
-#include ".Xresources.th/.Xnord"
-!
-! dmenu
-dmenu.foreground: #bf616a
-dmenu.background: #2e3440
-dmenu.selbackground: #bf616a
-dmenu.selforeground: #2e3440
+!#include ".Xresources.th/.Xnord"
+!!
+!! dmenu
+!dmenu.foreground: #bf616a
+!dmenu.background: #2e3440
+!dmenu.selbackground: #bf616a
+!dmenu.selforeground: #2e3440
 
 ! xterm
 xterm*termName: xterm-256color
