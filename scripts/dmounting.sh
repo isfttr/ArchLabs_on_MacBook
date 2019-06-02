@@ -19,3 +19,10 @@ sudo mount "&chosen" && exit 0
 # This will increase the load time briefly though.
 
 dirs=$(find /mnt /media /mount /home -type d -maxdepth 3 2>/dev/null)
+mountpoint=$(echo "$dirs" | dmenu -i -p "Type in mount point.")
+[[ "$mountpoint" = "" ]] && exit 1
+if [[ ! -d "$mountpoint" ]]; then
+    mkdiryn=$(echo -e "No\nYes" | dmenu -i -p "$mountpoint does not exist. Create it?")
+    [[ "$mkdiryn" = Yes ]] && sudo mkdir -p "$mountpoint"
+fi
+sudo mount $chosen $mountpoint && pgrep -x dunst && notify-send "$chosen mounted to $mountpoint."
