@@ -146,7 +146,7 @@ catch
     colorscheme jinx
 endtry
 
-let g:airline_theme='base16_nord'
+let g:airline_theme='wal'
 
 if $TERM !=? 'linux'
     set termguicolors

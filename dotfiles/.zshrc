@@ -110,6 +110,12 @@ cat ~/.cache/wal/sequences
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
 
+# function to integrate wal and feh
+wal-scale() {
+    wal -n -i "$@"
+    feh --bg-scale "$(< "${HOME}/.cache/wal/wal")"
+}
+
 #aliases below
 alias vim='nvim'
 alias v='nvim'
@@ -164,8 +170,6 @@ alias f='uskb && vifm'
 alias l='clear && ufetch'
 alias q='exit'
 alias mpdd='mpd ~/.config/mpd/mpd.conf'
-#alias dmenu_run="dmenu_run -nb '#2e3440' -sf '#2e3440' -nf '#bf616a' -sb '#bf616a'"
-#alias dmenu="dmenu -nb '#2e3440' -sf '#2e3440' -nf '#bf616a' -sb '#bf616a'"
 
 # changing keyboard layout - usekeybinding later
 alias uskb='setxkbmap -layout us -variant mac'
