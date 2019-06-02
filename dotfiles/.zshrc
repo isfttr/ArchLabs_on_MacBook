@@ -151,6 +151,7 @@ alias ydlaudio='youtube-dl -i -f bestaudio'
 alias f='uskb && vifm'
 alias l='clear && ufetch'
 alias q='exit'
+alias mpdd='mpd ~/.config/mpd/mpd.conf'
 #alias dmenu_run="dmenu_run -nb '#2e3440' -sf '#2e3440' -nf '#bf616a' -sb '#bf616a'"
 #alias dmenu="dmenu -nb '#2e3440' -sf '#2e3440' -nf '#bf616a' -sb '#bf616a'"
 

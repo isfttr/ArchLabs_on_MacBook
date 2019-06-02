@@ -205,9 +205,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 2
 bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
-bindsym Mod1+F2   exec --no-startup-id xbacklight -inc 5
-bindsym Mod1+F1   exec --no-startup-id xbacklight -dec 5
-
 # keyboard
 bindsym XF86KbdBrightnessUp   exec --no-startup-id kbdlight up 10
 bindsym XF86KbdBrightnessDown exec --no-startup-id kbdlight down 10

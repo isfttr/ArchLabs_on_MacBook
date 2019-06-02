@@ -66,7 +66,8 @@ c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}&ia=web',
                         'scholar': 'https://scholar.google.com.br/scholar?hl=pt-BR&as_sdt=0%2C5&q={}&btnG=',
                         'unsplash': 'https://unsplash.com/search/photos/{}',
                         'reddit': 'https://www.reddit.com/search/?q={}',
-                        'unixporn': 'https://www.reddit.com/r/unixporn/search/?q={}&restrict_sr=1'
+                        'unixporn': 'https://www.reddit.com/r/unixporn/search/?q={}&restrict_sr=1',
+                        'nyaa': 'https://sukebei.nyaa.si/?f=0&c=0_0&q={}'
                        }
 #c.url.searchengines = {'DEFAULT': 'https://searx.me/?q={}&ia=web'}
 
