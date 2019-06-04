@@ -1,0 +1,32 @@
+#! /bin/sh
+
+sxhkd -c "$HOME/.config/sxhkd/sxhkdrc" &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width         2
+bspc config window_gap           5
+
+bspc config split_ratio          0.50
+
+# from gitlab.com/protesilaos/dotfiles
+bspc config single_monocle true # smart borders
+bspc config borderless_monocle true # smart borders
+bspc config gapless_monocle false # use "true" for smart gaps
+bspc config paddingless_monocle false
+bspc config focus_follows_pointer false
+bspc config pointer_follows_monitor true # brings pointer to focused monitor (see workspaces)
+bspc config pointer_modifier mod1 # ALT key (see why right below)
+bspc config pointer_action1 move # alt + left-click to move node
+bspc config pointer_action2 resize_side # alt + right-click to resize node splits
+bspc config click_to_focus any # focus with any click
+bspc config swallow_first_click false # play the mouse event (e.g. right click context menu)
+bspc config initial_polarity first_child
+bspc config ignore_ewmh_focus true # prevent focus stealing
+# end ---
+
+bspc rule -a emacs desktop='^1'
+bspc rule -a mailspring desktop='^2'
+bspc rule -a qutebrowser desktop='^3'
+bspc rule -a inkscape desktop='^4'
+bspc rule -a rstudio desktop='^4'
