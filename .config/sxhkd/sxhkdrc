@@ -141,8 +141,8 @@ super + x ; {x,m}
         {rofi_run -l,bash ~/scripts/displayselect}
 
 # other applications
-super + a ; {t,i,r,m}
-        {telegram-desktop,inkscape,rstudio,mailspring}
+super + a ; {t,shift+t,ctrl+t,i,r,m}
+        {telegram-desktop,transmission-gtk,thunar,inkscape,rstudio,mailspring}
 
 #
 # audio controls
@@ -169,4 +169,10 @@ XF86KbdBrightness{Up,Down}
 # change keyboard layout
 #
 shift + alt + {u,i}
-        st -e {setxbmap -layout us -variant mac && notify-send "keymap set: US",setxbmap -layout us -variant intl && notify-send "keymap set: Intl"}
+        {setxbmap -layout us -variant mac && notify-send "keymap set: US",setxbmap -layout us -variant intl && notify-send "keymap set: Intl"}
+
+#
+# toggle polybar
+#
+#alt + p
+#        st -e {polybar-msg cmd toggle}

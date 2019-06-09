@@ -10,6 +10,9 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="lambda-mod"
 
+# BSPWM SOCKET
+export BSPWM_SOCKET=/tmp/bspwm-socket
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -182,6 +185,8 @@ alias xresconf='nvim ~/.Xresources'
 alias vimconf='nvim ~/.config/nvim/init.vim'
 alias vifmconf='nvim ~/.config/vifm/vifmrc'
 alias newsconf='nvim ~/.newsboat/urls'
+alias bspconf='nvim ~/.config/bspwm/bspwmrc'
+alias sxconf='nvim ~/.config/sxhkd/sxhkdrc'
 
 ## access other repositories
 
@@ -216,5 +221,3 @@ alias ufetch='clear && ufetch'
 # Create the alias.
 alias dmen='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
 
-# locking commands for bspwm
-alias lock='rofi_run -l'

@@ -27,6 +27,9 @@ xset dpms 1200 1300 1400
 # keyboard repeat rate
 xset r rate 350 60
 
+## bspwm
+exec bspwm
+
 # MPD daemon start (if no other user instance exists)
 [ ! -s ~/.config/mpd/pid ] && mpd
 
@@ -34,5 +37,3 @@ xset r rate 350 60
 # -R restores the last colorscheme that was in use.
 wal -R
 
-## bspwm
-exec bspwm
