@@ -14,7 +14,9 @@ config.bind("ch", "history-clear")
 config.bind("cs", "config-source")
 config.bind("pf", "fullscreen")
 config.bind("po", "edit-url")
-config.bind(",p", "hint links spawn --detach mpv --force-window yes {hint-url}")
+config.bind(",p", "hint links spawn --detach mpv --screenshot-template=%tX-%wT-%n-%p --screenshot-directory=~/Desktop/mpv-screenshots/ --force-window yes {hint-url}")
+config.bind(",c", "hint links spawn --detach mpv --screenshot-template=%tX-%wT-%n-%p --screenshot-directory=~/Desktop/chaturbate-screenshots/ --force-window yes {hint-url}")
+config.bind(",v", "hint links spawn --detach mpv --screenshot-template=%tX-%wT-%n-%p --screenshot-directory=~/Desktop/porn-screenshots/ --force-window yes {hint-url}")
 config.bind("wa", "open https://web.archive.org/web/{url}")
 config.bind(",w", "hint links fill :open -t https://web.archive.org/web/{hint-url}")
 config.bind("t", "open -t")
@@ -391,6 +393,6 @@ c.colors.tabs.selected.even.bg = base05
 
 # Background color for webpages if unset (or empty to use the theme's
 # color).
-# c.colors.webpage.bg = base00
+c.colors.webpage.bg = base00
 
 config.source('qutewal.py')

@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
 count=0
-disconnected="unplugged"
-wireless_connected="wifi"
-ethernet_connected="eth"
+disconnected=""
+wireless_connected=""
+ethernet_connected=""
 
-SSID_NAME=$(iwgetid -r)
 ID="$(ip link | awk '/state UP/ {print $2}')"
 
 while true; do
@@ -13,9 +12,9 @@ while true; do
         if [[ $ID == e* ]]; then
             echo "$ethernet_connected" ; sleep 25
         else
-            echo "$wireless_connected" "${SSID_NAME}"; sleep 5
+            echo "$wireless_connected" ; sleep 25
         fi
     else
-        echo "$disconnected" "$disconnected1"; sleep 0.5
+        echo "$disconnected" ; sleep 0.5
     fi
 done

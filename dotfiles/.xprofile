@@ -1,6 +1,9 @@
 #!/bin/sh
 # ~/.xprofile
 
+#set shell that sxhkd uses to execute commands:
+export SXHKD_SHELL=/usr/bin/bash
+
 # sourced at boot by both xinit and most display managers like lightdm
 
 export XDG_CONFIG_HOME="$HOME/.config"

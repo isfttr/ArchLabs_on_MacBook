@@ -134,7 +134,7 @@ super + e
 
 # screenshots
 super + z
-        {flameshot gui}
+        {flameshot}
 
 # run scripts
 super + x ; {x,m}
@@ -168,11 +168,5 @@ XF86KbdBrightness{Up,Down}
 #
 # change keyboard layout
 #
-shift + alt + {u,i}
-        {setxbmap -layout us -variant mac && notify-send "keymap set: US",setxbmap -layout us -variant intl && notify-send "keymap set: Intl"}
-
-#
-# toggle polybar
-#
-#alt + p
-#        st -e {polybar-msg cmd toggle}
+super + alt + {u,i}
+        setxbmap {-layout us -variant mac && notify-send "keymap set: US",-layout us -variant intl && notify-send "keymap set: Intl"}
