@@ -1,3 +1,5 @@
+(This project is not maintained anymore)
+
 # Configuration files for ArchLabs
 
 This is a simple ArchLabs configuration that is currently
